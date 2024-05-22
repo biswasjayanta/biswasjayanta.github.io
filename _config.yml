@@ -1,1 +1,5 @@
-
+title: Jayanta Biswas
+#logo: /assets/img/headshot_circle.png
+description: Academic Portfolio
+show_downloads: true
+theme: jekyll-theme-minimal
