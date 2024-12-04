@@ -22,6 +22,7 @@ I have completed my bachelor and master degree in Urban and Rural Planning Disci
   
   Jan 2017 – Mar 2022
 
-# Adv. GIS course final project site
-- Word Description
-- Link
+### Adv. GIS Course Project List
+** Final Project: Remote Sensing Index Calculation **
+Description
+- Before using this code, user must have an account on Google Earth Engine
