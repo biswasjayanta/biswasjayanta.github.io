@@ -23,11 +23,11 @@ Description
 
 - User has option to choose which satellite image user want to use: Landsat-8 or Sentinel-2
   
-- Then user will have option to choose which index or indices (NDVI, SAVI, MSAVI, GRVI, NDWI, MNDWI,MAWEI, NDMI, NDBI, and LST) user want to calculate.
+- Then user will have option to choose which index or indices **(NDVI, SAVI, MSAVI, GRVI, NDWI, MNDWI,MAWEI, NDMI, NDBI, and LST)** user want to calculate.
   
 - The code will run in a loop until user want to break the program.
   
-- The calculated index or indices will save to a folder name 'GEE_Exports' in user's google drive.
+- The calculated index or indices will save to a folder name **'GEE_Exports'** in user's google drive.
   
 - Here is the final project [Github Repository Link](https://github.com/biswasjayanta/Python-For-GeospatialAnalysis/blob/8950e5e82e8f1eee43281e13bcc2e8f09873c6c0/RemoteSensingIndexCalculation.ipynb)
 
