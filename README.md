@@ -15,8 +15,8 @@ Description
 - Before using this code, user must have an account on [Google Earth Engine](https://code.earthengine.google.com/) and a cloud project. If you are first time using Google Earth Engine in Python platform you can check out this [geemap website](https://geemap.org/installation/).
   
 - In this project, I tried to give user as much flexibility as I can. After successfully authenticate the GEE map, user will have option to choose which way user want to import the area of interest. At present there are three options:
-    1. calling from google earth engine cloud project;
-    2. local shapefile.
+    1. From Google Earth Engine cloud project;
+    2. Local Shapefile.
     3. Draw on the Map
   
 - After defining the AOI, user can input the date range and how much cloud cover user will consider.
