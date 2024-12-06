@@ -14,11 +14,14 @@ I have completed my bachelor and master degree in Urban and Rural Planning Disci
 Description
 - Before using this code, user must have an account on [Google Earth Engine](https://code.earthengine.google.com/) and a cloud project. If you are first time using Google Earth Engine in Python platform you can check out this [geemap website](https://geemap.org/installation/).
   
-- In this project, I tried to give user as much flexibility as I can. After successfully authenticate the GEE map, user will have option to choose which way user want to import the area of interest. At present there are two option:
+- In this project, I tried to give user as much flexibility as I can. After successfully authenticate the GEE map, user will have option to choose which way user want to import the area of interest. At present there are three options:
     1. calling from google earth engine cloud project;
     2. local shapefile.
+    3. Draw on the Map
   
 - After defining the AOI, user can input the date range and how much cloud cover user will consider.
+
+- User has option to choose which satellite image user want to use: Landsat-8 or Sentinel-2
   
 - Then user will have option to choose which index or indices (NDVI, SAVI, MSAVI, GRVI, NDWI, MNDWI,MAWEI, NDMI, NDBI, and LST) user want to calculate.
   
@@ -26,7 +29,7 @@ Description
   
 - The calculated index or indices will save to a folder name 'GEE_Exports' in user's google drive.
   
-- Here is the final project [Github Repository Link](https://github.com/luisvillalxv/Adv-GIS-project/blob/246ff7ca2339e710443fe2458a1d7b60543e4d7a/RemoteSensingIndexCalculation.ipynb)
+- Here is the final project [Github Repository Link](https://github.com/biswasjayanta/Python-For-GeospatialAnalysis/blob/8950e5e82e8f1eee43281e13bcc2e8f09873c6c0/RemoteSensingIndexCalculation.ipynb)
 
 **ArcGIS Pro Toolbox: Batch Pixel Count to Table**
 
