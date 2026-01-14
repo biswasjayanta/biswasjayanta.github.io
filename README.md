@@ -1,14 +1,19 @@
 # Geospatial Solutions 🛰️
 
 ### About Me
-I have completed my bachelor and master degree in Urban and Rural Planning Discipline at Khulna University. At present, I am pursing my Master in Science in Earth Sciences (Geogrphy) at the University of Memphis. I am also working as Graduate Research Assistant in Applying Induced Travel Study in Tennessee.
+I have completed my bachelor and master degree in Urban and Rural Planning Discipline at Khulna University. Also got my second master degree in Earth Sciences from the University of Memphis. At present, I am pursing my Doctoral Degree in Geography at the University of North Carolina at Charlotte.
 
 I love to work with geospatial data. I want to unfold differnt real worlds problems with the help of geospatial and statistical methods. In this [Github page](https://biswasjayanta.github.io), you will find differnt real worlds problem that I have been tried to solve with the help of Python programming language and it's packages. 
 
 ### Education
-- M.S. in Earth Sciences, The University of Memphis, Jan 2024 – Present
+- PhD in Geography, University of North Carolina at Charlotte, Jan 2026 - Present
+- M.S. in Earth Sciences, The University of Memphis, Jan 2024 – Dec 2025
 - Master of Urban and Rural Planning, Khulna University, Jul 2022 – Jan 2024
 - Bachelor of Urban and Rural Planning, Khulna University, Jan 2017 – Mar 2022
+
+### Portfolio Link (Geovisualization)
+
+[Geovisualization Portfolio](https://biswasjayanta.github.io/GeoVisualization_Portfolio.html)
 
 ### Geospatial Project List
 **Final Project: Remote Sensing Index Calculation**
