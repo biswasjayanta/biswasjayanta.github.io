@@ -15,7 +15,7 @@ I love to work with geospatial data. I want to unfold differnt real worlds probl
 
 [Geovisualization Portfolio](https://biswasjayanta.github.io/GeoVisualization_Portfolio.html)
 
-[Geovisualization Showcase](https://github.com/biswasjayanta/biswasjayanta.github.io/GeoViz_Showcase.html)
+[Geovisualization Showcase](https://biswasjayanta.github.io/GeoViz_Showcase.html)
 
 ### Geospatial Project List
 **Final Project: Remote Sensing Index Calculation**
