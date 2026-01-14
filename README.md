@@ -3,7 +3,7 @@
 ### About Me
 I have completed my bachelor and master degree in Urban and Rural Planning Discipline at Khulna University. Also got my second master degree in Earth Sciences from the University of Memphis. At present, I am pursing my Doctoral Degree in Geography at the University of North Carolina at Charlotte.
 
-I love to work with geospatial data. I want to unfold differnt real worlds problems with the help of geospatial and statistical methods. In this [Github page](https://biswasjayanta.github.io), you will find differnt real worlds problem that I have been tried to solve with the help of Python programming language and it's packages. 
+I love to work with geospatial data. I want to unfold differnt real worlds problems with the help of geospatial and statistical methods. In this [Github page](https://biswasjayanta.github.io), you will find differnt real worlds problem that I have been tried to solve with the help of GIS and programming language and it's packages. 
 
 ### Education
 - PhD in Geography, University of North Carolina at Charlotte, Jan 2026 - Present
