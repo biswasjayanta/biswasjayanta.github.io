@@ -1095,6 +1095,7 @@
         function closeExportModal() { document.getElementById('export-modal').classList.remove('active'); }
 
         function generateGallery() {
+            
             const selectedItems = document.querySelectorAll('.export-item.selected');
             if (selectedItems.length === 0) { alert("Please select at least one image."); return; }
 
@@ -1113,11 +1114,11 @@
                     const flexBasis = Math.floor(baseHeight * ratio);
                     styleStr = `style="flex-grow: ${growFactor}; flex-basis: ${flexBasis}px;"`;
                 }
-
+                const fileName = imgSrc.split('/').pop().split('?')[0].split('#')[0];
                 galleryItemsHTML += `
-                <div class="card gallery-card" id="card-${index}" data-img="${imgSrc}" ${styleStr}>
+                <div class="card gallery-card" id="card-${index}" data-img="${fileName}" ${styleStr}>
                     <div class="card-inner">
-                        <img src="${imgSrc}" alt="Gallery Image">
+                        <img src="${fileName}" alt="Gallery Image">
                         <div class="card-content">
                             <h3>${item.dataset.title}</h3>
                             <div class="desc">${item.dataset.desc}</div>
