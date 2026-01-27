@@ -1866,46 +1866,54 @@
         // NEW: Save & Download that prevents autosave from "messing up" other copies
         function saveFile() {
             if (isEditing) toggleEdit();
-
-            // Preserve checkbox state in exported HTML
+        
+            // Preserve checkbox state
             document.querySelectorAll('input[type="checkbox"]').forEach(box => {
                 if (box.checked) box.setAttribute('checked', 'checked');
                 else box.removeAttribute('checked');
             });
-
+        
             // Ask filename
             const currentPathName = (window.location.pathname || "");
-            const currentFileName = (currentPathName.split('/').pop() || "").trim(); // works for file:// and http(s)
+            const currentFileName = (currentPathName.split('/').pop() || "").trim();
             const fallbackDefault = "GeoViz_Portfolio.html";
             const defaultName = currentFileName || fallbackDefault;
-
             const filename = (prompt("Filename to download:", defaultName) || defaultName).trim() || defaultName;
-
-            // Decide exportId:
-            // If user saves with a DIFFERENT filename than the currently opened file,
-            // we ALWAYS create a new portfolio-id so autosave does NOT carry over.
+        
+            // --- NEW: CLEANUP LOGIC ---
+            // 1. Clone the entire document so we don't break the current view
+            const docClone = document.documentElement.cloneNode(true);
+        
+            // 2. Remove the generated toolbars from the CLONE
+            const toolbars = docClone.querySelectorAll('.ql-toolbar');
+            toolbars.forEach(el => el.remove());
+        
+            // 3. Clean Quill classes from the editor container in the CLONE
+            // (This ensures Quill starts fresh when you open the saved file)
+            const qContainer = docClone.querySelector('#quill-container');
+            if (qContainer) {
+                qContainer.classList.remove('ql-container', 'ql-snow');
+                // Optional: Remove the ql-editor wrapper if you want purely raw content, 
+                // but leaving it is usually fine.
+            }
+            // --------------------------
+        
+            // Update meta tag for autosave ID (existing logic)
             const currentId = getPortfolioId();
             const isSaveAsNewFile = (filename !== defaultName);
-
             const exportId = isSaveAsNewFile ? generateId() : currentId;
-
-            // Ensure meta exists
-            let meta = document.querySelector('meta[name="portfolio-id"]');
+            
+            let meta = docClone.querySelector('meta[name="portfolio-id"]');
             if (!meta) {
                 meta = document.createElement('meta');
                 meta.name = "portfolio-id";
-                document.head.appendChild(meta);
+                docClone.querySelector('head').appendChild(meta);
             }
-
-            // Temporarily set meta to exportId for the exported HTML only
-            const originalMeta = meta.content;
             meta.content = exportId;
-
-            const htmlContent = "<!DOCTYPE html>\n<html lang='en'>" + document.documentElement.innerHTML + "</html>";
-
-            // Restore current page meta so THIS page keeps its own autosave continuity
-            meta.content = (originalMeta && originalMeta.trim()) ? originalMeta : currentId;
-
+        
+            // Generate the HTML from the CLEAN CLONE
+            const htmlContent = "<!DOCTYPE html>\n<html lang='en'>" + docClone.innerHTML + "</html>";
+        
             // Download
             const blob = new Blob([htmlContent], { type: 'text/html' });
             const a = document.createElement('a');
@@ -1914,15 +1922,9 @@
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-
-            // Mark manual save done (so close warning doesn't appear)
+        
             dirtySinceManualSave = false;
-
-            // IMPORTANT: do NOT seed localStorage for exportId.
-            // The downloaded file already contains the current state in its HTML,
-            // and seeding can make it look like it “inherited” autosaves.
         }
-
     </script>
 
 
