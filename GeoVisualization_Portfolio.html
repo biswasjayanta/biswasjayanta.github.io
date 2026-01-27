@@ -709,7 +709,7 @@
                         <img class="viz-source" src="test1.jpg" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>3D Visualization</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -729,7 +729,7 @@
                         <img class="viz-source" src="test2.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Beautiful Map</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -749,7 +749,7 @@
                         <img class="viz-source" src="test3.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>NC Map</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -774,7 +774,7 @@
                         <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -796,7 +796,7 @@
                 <div class="gallery-grid"><div class="gallery-item" data-type="text" onclick="openModal(this)">
                 <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
                 
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Reflections...</p></div>
                     
@@ -813,7 +813,7 @@
                         <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -838,7 +838,7 @@
                         <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -868,7 +868,7 @@
                         <img class="viz-source" src="lab2_partA.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot Part-A</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -888,7 +888,7 @@
                         <img class="viz-source" src="lab2_partB.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot Part B</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -908,7 +908,7 @@
                         <img class="viz-source" src="lab2_partC.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot Part C</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -928,7 +928,7 @@
                         <img class="viz-source" src="lab2_partD.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot Part D</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -953,7 +953,7 @@
                         <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -975,7 +975,7 @@
                 <div class="gallery-grid"><div class="gallery-item" data-type="text" onclick="openModal(this)">
                 <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
                 
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p><strong>Short Reflection</strong></p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><ol><li><strong>Command not found (Typo error):</strong> go back and make sure I type the command name correctly.</li><li><strong>Problem during Conda install</strong>: forgot to include -y during the install, and cannot enter y/n during installation in Jupyter Lab. I just interrupted the kernel, added -y, and re-ran the code.</li><li><strong>Package not found:</strong> use the conda/pip command to install the package that was missing.</li><li><strong>Why does the environment matter?</strong></li></ol><ul><li class="ql-indent-1">Helps to avoid failure when moving code from one machine to another.</li><li class="ql-indent-1">Mitigate the package conflicts.</li><li class="ql-indent-1">Sometimes libraries get updates, and those updates might change functionality that conflicts with previous versions. The environment helps us maintain the specific versions we need for our geovisualization task.</li><li class="ql-indent-1">Helps reproduce the work months later, as the documented environment includes the specific version and packages required for the project.</li></ul></div>
                     
@@ -992,7 +992,7 @@
                         <img class="viz-source" src="Week_2_Gemini_Generated_Image_1.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Mapping Permanent Waterbodies Transition in Charlotte (Static Map)</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p><strong>[ROLE]</strong> Act as a Lead Cartographer and Scientific Illustrator for a high-impact geospatial journal (e.g., IEEE TVCG or Cartography and Geographic Information Science).</p><p><strong>[GOAL]</strong> I need you to generate two high-fidelity demo images based on the project definition below. Do not write code. Do not write an essay. Generate the actual images. </p><p><strong>[PROJECT DEFINITION]</strong></p><p>• Topic: Permanent waterbodies mapping</p><p>• Title: Mapping Permanent Waterbodies Transition in Charlotte</p><p>• Claim: Visualize how waterbodies increasing/decreasing over time and which area looses or gain waterbodies</p><p>• Audience + Task: Urban Planners and Environmental Conservation Agencies</p><p>• Data + License: Synthetic Aperture Radar (SAR) data from Sentinel-1 and Census Vector Polygon</p><p>• Static Idea: Showing waterbody change map</p><p>• Interactive Idea: Dynamic map how waterbodies decrease/increase over time</p></div>
                     
@@ -1012,7 +1012,7 @@
                         <img class="viz-source" src="Week_2_Gemini_Generated_Image_2.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Mapping Permanent Waterbodies Transition in Charlotte (Interactive Map Snapshot)</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p><strong>[ROLE]</strong> Act as a Lead Cartographer and Scientific Illustrator for a high-impact geospatial journal (e.g., IEEE TVCG or Cartography and Geographic Information Science).</p><p><strong>[GOAL]</strong> I need you to generate two high-fidelity demo images based on the project definition below. Do not write code. Do not write an essay. Generate the actual images. </p><p><strong>[PROJECT DEFINITION]</strong></p><p>• Topic: Permanent waterbodies mapping</p><p>• Title: Mapping Permanent Waterbodies Transition in Charlotte</p><p>• Claim: Visualize how waterbodies increasing/decreasing over time and which area looses or gain waterbodies</p><p>• Audience + Task: Urban Planners and Environmental Conservation Agencies</p><p>• Data + License: Synthetic Aperture Radar (SAR) data from Sentinel-1 and Census Vector Polygon</p><p>• Static Idea: Showing waterbody change map</p><p>• Interactive Idea: Dynamic map how waterbodies decrease/increase over time</p></div>
                     
@@ -1032,7 +1032,7 @@
                         <img class="viz-source" src="Week_2_Gemini_Generated_Image_3.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Map Peoples Movement using Ridesharing Services (Lime and Bird) in Atlanta (Static Map)</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p><strong>[ROLE]</strong> Act as a Lead Cartographer and Scientific Illustrator for a high-impact geospatial journal (e.g., IEEE TVCG or Cartography and Geographic Information Science).</p><p><strong>[GOAL]</strong> I need you to generate two high-fidelity demo images based on the project definition below. Do not write code. Do not write an essay. Generate the actual images. </p><p><strong>[PROJECT DEFINITION]</strong></p><p>• Topic: Transportation Micromobility</p><p>• Title: Map Peoples Movement using Ridesharing Services (Lime and Bird) in Atlanta</p><p>• Claim: Visualize people movement during different times and day</p><p>• Audience + Task: Lime and Bird API (sharing live location of their bikes)</p><p>• Data + License: Synthetic Aperture Radar (SAR) data from Sentinel-1 and Census Vector Polygon</p><p>• Static Idea: Hotspot map showing where most of the people travel using these bikes </p><p>• Interactive Idea: Dynamic map of people movement during different times and day</p></div>
                     
@@ -1052,7 +1052,7 @@
                         <img class="viz-source" src="Week_2_Gemini_Generated_Image_4.png" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Map Peoples Movement using Ridesharing Services (Lime and Bird) in Atlanta (Interactive Map Snapshot)</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p><strong>[ROLE]</strong> Act as a Lead Cartographer and Scientific Illustrator for a high-impact geospatial journal (e.g., IEEE TVCG or Cartography and Geographic Information Science).</p><p><strong>[GOAL]</strong> I need you to generate two high-fidelity demo images based on the project definition below. Do not write code. Do not write an essay. Generate the actual images. </p><p><strong>[PROJECT DEFINITION]</strong></p><p>• Topic: Transportation Micromobility</p><p>• Title: Map Peoples Movement using Ridesharing Services (Lime and Bird) in Atlanta</p><p>• Claim: Visualize people movement during different times and day</p><p>• Audience + Task: Lime and Bird API (sharing live location of their bikes)</p><p>• Data + License: Synthetic Aperture Radar (SAR) data from Sentinel-1 and Census Vector Polygon</p><p>• Static Idea: Hotspot map showing where most of the people travel using these bikes </p><p>• Interactive Idea: Dynamic map of people movement during different times and day</p></div>
                     
@@ -1077,7 +1077,7 @@
                         <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
                         <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
                    </div>
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
@@ -1500,7 +1500,7 @@
             const template = `<div class="gallery-item" data-type="${type}" onclick="openModal(this)">
                 <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
                 ${imagePart}
-                <div class="item-data" onclick="event.stopPropagation()">
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>${type === 'text' ? 'Reflections...' : 'Description...'}</p></div>
                     ${type === 'standard' ? `
