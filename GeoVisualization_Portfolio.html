@@ -667,7 +667,7 @@
             <div class="editor-header">
                 <h3>Editing Text</h3>
             </div>
-            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>Map Source: Carter Mayhew</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>JupyterLab: NDVI data export to google drive</p><p><br></p><p>eemap.ee_export_image_to_drive(</p><p>&nbsp;image=ndvi,</p><p>&nbsp;description="ndvi_demo_geovis",</p><p>&nbsp;folder="geemap_exports",</p><p>&nbsp;region=roi,</p><p>&nbsp;scale=20,</p><p>&nbsp;maxPixels=1e13,</p><p>)</p><p>print("Export task submitted. Check the Earth Engine Tasks tab.")</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden" style="margin-top: 0px;"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
             <div class="editor-footer">
                 <button class="editor-btn btn-cancel" onclick="closeEditor(false)">Cancel</button>
                 <button class="editor-btn btn-ok" onclick="closeEditor(true)">Save Changes</button>
@@ -1176,6 +1176,265 @@
                 <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Short Reflection</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><ol><li><strong>Command not found (Typo error):</strong> go back and make sure I type the command name correctly.</li><li><strong>Problem during Conda install</strong>: forget to put -y during conda install and cannot put y/n during installation in Jupyter lab. I just interrupt the kernel and put -y and re-run the code.</li><li><strong>Package not found:</strong> use conda/pip command to install the package which was missing.</li><li><strong>Why does the environment matter?</strong></li></ol><ul><li class="ql-indent-1">Helps to avoid failure during moving code from one machine to another machine.</li><li class="ql-indent-1">Mitigate the package conflicts.</li><li class="ql-indent-1">Sometimes libraries get updates and it might change some functionalities that might conflict with previous versions. The environment helps us to maintain specific versions that we need for our geovisualization task.</li><li class="ql-indent-1">Helps to reproduce the work after months as the documented environment contains the specific version and packages required for the project.</li></ul><p><br></p></div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'text')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">🚀 Project Progress</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">💬 Peer Review &amp; Extras</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+            </div><div class="week-block" id="week-4">
+                <div class="week-header">
+                    <h2 class="editable-field" onclick="openEditor(this)">Week 4</h2>
+                    <button class="delete-btn" onclick="deleteElement(this, event)">🗑️ Delete Week</button>
+                </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">💻 Labs &amp; Exercises</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S1.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-1</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>EarthExplorer: Search Criteria page showing your AOI + date range.</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox" checked="checked"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S2.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-2</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>EarthExplorer: Data Sets page showing the dataset(s) you selected (e.g., Landsat Collection 2 Level-2).</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S3.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-3</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>EarthExplorer: Results list showing at least one scene selected (include cloud cover/preview).</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S4.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-4</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>EarthExplorer: Download Options page (or your browser downloads list) showing the file is downloading or downloaded.</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S5.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-5</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>GEE access: Code Editor opens successfully OR a confirmation that your account is enabled (any clear proof).</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S6.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-6</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>JupyterLab: geemap map showing ROI + an imagery layer (e.g., Sentinel-2 RGB).</p><p><br></p><p>geemap.ee_initialize()</p><p># 1) ROI (edit if you want)</p><p>roi = ee.Geometry.Rectangle([-81.05, 35.10, -80.60, 35.45])</p><p># 2) Map</p><p>m = geemap.Map(center=[35.2271, -80.8431], zoom=10)</p><p>m.add_basemap("HYBRID")</p><p>m.addLayer(roi, {"color": "yellow"}, "ROI", True)</p><p># 3) Sentinel-2 SR (cloud-masked) with timestamp preserved</p><p>def mask_s2_sr(img):</p><p>&nbsp;scl = img.select("SCL")</p><p>&nbsp;mask = (scl.neq(3)</p><p>&nbsp;.And(scl.neq(8))</p><p>&nbsp;.And(scl.neq(9))</p><p>&nbsp;.And(scl.neq(10))</p><p>&nbsp;.And(scl.neq(11)))</p><p>&nbsp;out = img.updateMask(mask).divide(10000)</p><p>&nbsp;return out.copyProperties(img, img.propertyNames())</p><p>s2 = (ee.ImageCollection("COPERNICUS/S2_SR_HARMONIZED")</p><p>&nbsp;.filterBounds(roi)</p><p>&nbsp;.filterDate("2026-01-01", "2026-01-31")</p><p>&nbsp;.map(mask_s2_sr)</p><p>&nbsp;.filter(ee.Filter.notNull(["system:time_start"])))</p><p>s2_median = s2.median().clip(roi)</p><p>m.addLayer(s2_median, {"min": 0, "max": 0.3, "bands": ["B4","B3","B2"]}, "Sentinel-2 RGB")</p><p><br></p><p>m</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox" checked="checked"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S7.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-7</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>JupyterLab: NDVI layer visible with a colorbar/legend.</p><p><br></p><p># 4) NDVI</p><p>ndvi = s2_median.normalizedDifference(["B8","B4"]).rename("NDVI")</p><p>ndvi_vis = {"min": 0, "max": 1, "palette":</p><p>["#440154","#3b528b","#21918c","#5ec962","#fde725"]}</p><p>m.addLayer(ndvi, ndvi_vis, "NDVI")</p><p>m.add_colorbar(ndvi_vis, label="NDVI", layer_name="NDVI")</p><p>m</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox" checked="checked"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Lab3_S8.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Screenshot-8</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>JupyterLab: NDVI data export to google drive</p><p><br></p><p>eemap.ee_export_image_to_drive(</p><p>&nbsp;image=ndvi,</p><p>&nbsp;description="ndvi_demo_geovis",</p><p>&nbsp;folder="geemap_exports",</p><p>&nbsp;region=roi,</p><p>&nbsp;scale=20,</p><p>&nbsp;maxPixels=1e13,</p><p>)</p><p>print("Export task submitted. Check the Earth Engine Tasks tab.")</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox" checked="checked"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">📊 Good vs Bad Viz</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">📖 Reading Reflections</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="text" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Reflections...</p></div>
                     
                     <div class="notebook-wrapper"></div>
                 </div>
