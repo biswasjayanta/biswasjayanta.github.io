@@ -637,7 +637,7 @@
     </style>
 </head>
 
-<body class="">
+<body class="" data-new-gr-c-s-check-loaded="9.96.0" data-gr-ext-installed="">
 
     <div id="autosave-toast" class="">
         <div class="toast-title"><span>💾</span> Autosaved (Browser)</div>
@@ -667,7 +667,7 @@
             <div class="editor-header">
                 <h3>Editing Text</h3>
             </div>
-            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>JupyterLab: NDVI data export to google drive</p><p><br></p><p>eemap.ee_export_image_to_drive(</p><p>&nbsp;image=ndvi,</p><p>&nbsp;description="ndvi_demo_geovis",</p><p>&nbsp;folder="geemap_exports",</p><p>&nbsp;region=roi,</p><p>&nbsp;scale=20,</p><p>&nbsp;maxPixels=1e13,</p><p>)</p><p>print("Export task submitted. Check the Earth Engine Tasks tab.")</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden" style="margin-top: 0px;"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>JupyterLab: NDVI data export to google drive</p><p><br></p><p>eemap.ee_export_image_to_drive(</p><p>&nbsp;image=ndvi,</p><p>&nbsp;description="ndvi_demo_geovis",</p><p>&nbsp;folder="geemap_exports",</p><p>&nbsp;region=roi,</p><p>&nbsp;scale=20,</p><p>&nbsp;maxPixels=1e13,</p><p>)</p><p>print("Export task submitted. Check the Earth Engine Tasks tab.")</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
             <div class="editor-footer">
                 <button class="editor-btn btn-cancel" onclick="closeEditor(false)">Cancel</button>
                 <button class="editor-btn btn-ok" onclick="closeEditor(true)">Save Changes</button>
@@ -1357,7 +1357,123 @@
                             <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
                         </div>
                     
-                    <div class="notebook-wrapper"></div>
+                    <div class="notebook-wrapper">
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [1]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> ee
+<span class="token keyword">import</span> geemap</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [2]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">ee<span class="token punctuation">.</span>Authenticate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ee<span class="token punctuation">.</span>Initialize<span class="token punctuation">(</span>project<span class="token operator">=</span><span class="token string">"ee-jayantakurp17"</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [3]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># quick sanity check (should print a CRS string like 'EPSG:4326' or similar)</span>
+img <span class="token operator">=</span> ee<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token string">"USGS/SRTMGL1_003"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>projection<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>crs<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getInfo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [4]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"numpy:"</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"pandas:"</span><span class="token punctuation">,</span> pd<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+inventory <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"USGS EarthExplorer"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Landsat C2 L2 (SR)"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"30m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check metadata"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"downloaded 1 scene"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"GEE (via geemap)"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Sentinel-2 SR Harmonized"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"10–20 m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check collection docs"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"NDVI + time series"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+inventory</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [5]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">from</span> geemap <span class="token keyword">import</span> chart
+
+geemap<span class="token punctuation">.</span>ee_initialize<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 1) ROI (edit if you want)</span>
+roi <span class="token operator">=</span> ee<span class="token punctuation">.</span>Geometry<span class="token punctuation">.</span>Rectangle<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">81.05</span><span class="token punctuation">,</span> <span class="token number">35.10</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.60</span><span class="token punctuation">,</span> <span class="token number">35.45</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 2) Map</span>
+m <span class="token operator">=</span> geemap<span class="token punctuation">.</span>Map<span class="token punctuation">(</span>center<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">35.2271</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.8431</span><span class="token punctuation">]</span><span class="token punctuation">,</span> zoom<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_basemap<span class="token punctuation">(</span><span class="token string">"HYBRID"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>roi<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"color"</span><span class="token punctuation">:</span> <span class="token string">"yellow"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"ROI"</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment"># 3) Sentinel-2 SR (cloud-masked) with timestamp preserved</span>
+<span class="token keyword">def</span> <span class="token function">mask_s2_sr</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+ scl <span class="token operator">=</span> img<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"SCL"</span><span class="token punctuation">)</span>
+ mask <span class="token operator">=</span> <span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ out <span class="token operator">=</span> img<span class="token punctuation">.</span>updateMask<span class="token punctuation">(</span>mask<span class="token punctuation">)</span><span class="token punctuation">.</span>divide<span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> out<span class="token punctuation">.</span>copyProperties<span class="token punctuation">(</span>img<span class="token punctuation">,</span> img<span class="token punctuation">.</span>propertyNames<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2 <span class="token operator">=</span> <span class="token punctuation">(</span>ee<span class="token punctuation">.</span>ImageCollection<span class="token punctuation">(</span><span class="token string">"COPERNICUS/S2_SR_HARMONIZED"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterBounds<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterDate<span class="token punctuation">(</span><span class="token string">"2026-01-01"</span><span class="token punctuation">,</span> <span class="token string">"2026-01-31"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>mask_s2_sr<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>ee<span class="token punctuation">.</span>Filter<span class="token punctuation">.</span>notNull<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"system:time_start"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2_median <span class="token operator">=</span> s2<span class="token punctuation">.</span>median<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>clip<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>s2_median<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token string">"bands"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"B4"</span><span class="token punctuation">,</span><span class="token string">"B3"</span><span class="token punctuation">,</span><span class="token string">"B2"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Sentinel-2 RGB"</span><span class="token punctuation">)</span>
+
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [6]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># 4) NDVI</span>
+ndvi <span class="token operator">=</span> s2_median<span class="token punctuation">.</span>normalizedDifference<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"B8"</span><span class="token punctuation">,</span><span class="token string">"B4"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+ndvi_vis <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"palette"</span><span class="token punctuation">:</span>
+<span class="token punctuation">[</span><span class="token string">"#440154"</span><span class="token punctuation">,</span><span class="token string">"#3b528b"</span><span class="token punctuation">,</span><span class="token string">"#21918c"</span><span class="token punctuation">,</span><span class="token string">"#5ec962"</span><span class="token punctuation">,</span><span class="token string">"#fde725"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>ndvi<span class="token punctuation">,</span> ndvi_vis<span class="token punctuation">,</span> <span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_colorbar<span class="token punctuation">(</span>ndvi_vis<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">,</span> layer_name<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [7]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">eemap<span class="token punctuation">.</span>ee_export_image_to_drive<span class="token punctuation">(</span>
+ image<span class="token operator">=</span>ndvi<span class="token punctuation">,</span>
+ description<span class="token operator">=</span><span class="token string">"ndvi_demo_geovis"</span><span class="token punctuation">,</span>
+ folder<span class="token operator">=</span><span class="token string">"geemap_exports"</span><span class="token punctuation">,</span>
+ region<span class="token operator">=</span>roi<span class="token punctuation">,</span>
+ scale<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
+ maxPixels<span class="token operator">=</span><span class="token number">1e13</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Export task submitted. Check the Earth Engine Tasks tab."</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [8]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"></code></pre>
+                                            </div>
+                                        </div></div>
                 </div>
             </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
                 <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
@@ -1377,7 +1493,123 @@
                             <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
                         </div>
                     
-                    <div class="notebook-wrapper"></div>
+                    <div class="notebook-wrapper">
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [1]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> ee
+<span class="token keyword">import</span> geemap</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [2]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">ee<span class="token punctuation">.</span>Authenticate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ee<span class="token punctuation">.</span>Initialize<span class="token punctuation">(</span>project<span class="token operator">=</span><span class="token string">"ee-jayantakurp17"</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [3]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># quick sanity check (should print a CRS string like 'EPSG:4326' or similar)</span>
+img <span class="token operator">=</span> ee<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token string">"USGS/SRTMGL1_003"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>projection<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>crs<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getInfo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [4]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"numpy:"</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"pandas:"</span><span class="token punctuation">,</span> pd<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+inventory <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"USGS EarthExplorer"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Landsat C2 L2 (SR)"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"30m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check metadata"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"downloaded 1 scene"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"GEE (via geemap)"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Sentinel-2 SR Harmonized"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"10–20 m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check collection docs"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"NDVI + time series"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+inventory</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [5]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">from</span> geemap <span class="token keyword">import</span> chart
+
+geemap<span class="token punctuation">.</span>ee_initialize<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 1) ROI (edit if you want)</span>
+roi <span class="token operator">=</span> ee<span class="token punctuation">.</span>Geometry<span class="token punctuation">.</span>Rectangle<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">81.05</span><span class="token punctuation">,</span> <span class="token number">35.10</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.60</span><span class="token punctuation">,</span> <span class="token number">35.45</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 2) Map</span>
+m <span class="token operator">=</span> geemap<span class="token punctuation">.</span>Map<span class="token punctuation">(</span>center<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">35.2271</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.8431</span><span class="token punctuation">]</span><span class="token punctuation">,</span> zoom<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_basemap<span class="token punctuation">(</span><span class="token string">"HYBRID"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>roi<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"color"</span><span class="token punctuation">:</span> <span class="token string">"yellow"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"ROI"</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment"># 3) Sentinel-2 SR (cloud-masked) with timestamp preserved</span>
+<span class="token keyword">def</span> <span class="token function">mask_s2_sr</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+ scl <span class="token operator">=</span> img<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"SCL"</span><span class="token punctuation">)</span>
+ mask <span class="token operator">=</span> <span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ out <span class="token operator">=</span> img<span class="token punctuation">.</span>updateMask<span class="token punctuation">(</span>mask<span class="token punctuation">)</span><span class="token punctuation">.</span>divide<span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> out<span class="token punctuation">.</span>copyProperties<span class="token punctuation">(</span>img<span class="token punctuation">,</span> img<span class="token punctuation">.</span>propertyNames<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2 <span class="token operator">=</span> <span class="token punctuation">(</span>ee<span class="token punctuation">.</span>ImageCollection<span class="token punctuation">(</span><span class="token string">"COPERNICUS/S2_SR_HARMONIZED"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterBounds<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterDate<span class="token punctuation">(</span><span class="token string">"2026-01-01"</span><span class="token punctuation">,</span> <span class="token string">"2026-01-31"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>mask_s2_sr<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>ee<span class="token punctuation">.</span>Filter<span class="token punctuation">.</span>notNull<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"system:time_start"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2_median <span class="token operator">=</span> s2<span class="token punctuation">.</span>median<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>clip<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>s2_median<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token string">"bands"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"B4"</span><span class="token punctuation">,</span><span class="token string">"B3"</span><span class="token punctuation">,</span><span class="token string">"B2"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Sentinel-2 RGB"</span><span class="token punctuation">)</span>
+
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [6]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># 4) NDVI</span>
+ndvi <span class="token operator">=</span> s2_median<span class="token punctuation">.</span>normalizedDifference<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"B8"</span><span class="token punctuation">,</span><span class="token string">"B4"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+ndvi_vis <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"palette"</span><span class="token punctuation">:</span>
+<span class="token punctuation">[</span><span class="token string">"#440154"</span><span class="token punctuation">,</span><span class="token string">"#3b528b"</span><span class="token punctuation">,</span><span class="token string">"#21918c"</span><span class="token punctuation">,</span><span class="token string">"#5ec962"</span><span class="token punctuation">,</span><span class="token string">"#fde725"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>ndvi<span class="token punctuation">,</span> ndvi_vis<span class="token punctuation">,</span> <span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_colorbar<span class="token punctuation">(</span>ndvi_vis<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">,</span> layer_name<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [7]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">eemap<span class="token punctuation">.</span>ee_export_image_to_drive<span class="token punctuation">(</span>
+ image<span class="token operator">=</span>ndvi<span class="token punctuation">,</span>
+ description<span class="token operator">=</span><span class="token string">"ndvi_demo_geovis"</span><span class="token punctuation">,</span>
+ folder<span class="token operator">=</span><span class="token string">"geemap_exports"</span><span class="token punctuation">,</span>
+ region<span class="token operator">=</span>roi<span class="token punctuation">,</span>
+ scale<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
+ maxPixels<span class="token operator">=</span><span class="token number">1e13</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Export task submitted. Check the Earth Engine Tasks tab."</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [8]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"></code></pre>
+                                            </div>
+                                        </div></div>
                 </div>
             </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
                 <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
@@ -1397,7 +1629,123 @@
                             <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
                         </div>
                     
-                    <div class="notebook-wrapper"></div>
+                    <div class="notebook-wrapper">
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [1]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> ee
+<span class="token keyword">import</span> geemap</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [2]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">ee<span class="token punctuation">.</span>Authenticate<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ee<span class="token punctuation">.</span>Initialize<span class="token punctuation">(</span>project<span class="token operator">=</span><span class="token string">"ee-jayantakurp17"</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [3]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># quick sanity check (should print a CRS string like 'EPSG:4326' or similar)</span>
+img <span class="token operator">=</span> ee<span class="token punctuation">.</span>Image<span class="token punctuation">(</span><span class="token string">"USGS/SRTMGL1_003"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>img<span class="token punctuation">.</span>projection<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>crs<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>getInfo<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [4]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"numpy:"</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"pandas:"</span><span class="token punctuation">,</span> pd<span class="token punctuation">.</span>__version__<span class="token punctuation">)</span>
+inventory <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"USGS EarthExplorer"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Landsat C2 L2 (SR)"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"30m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check metadata"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"downloaded 1 scene"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"GEE (via geemap)"</span><span class="token punctuation">,</span>
+            <span class="token string">"dataset"</span><span class="token punctuation">:</span> <span class="token string">"Sentinel-2 SR Harmonized"</span><span class="token punctuation">,</span>
+            <span class="token string">"resolution"</span><span class="token punctuation">:</span> <span class="token string">"10–20 m"</span><span class="token punctuation">,</span>
+            <span class="token string">"license"</span><span class="token punctuation">:</span> <span class="token string">"check collection docs"</span><span class="token punctuation">,</span>
+            <span class="token string">"notes"</span><span class="token punctuation">:</span> <span class="token string">"NDVI + time series"</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+inventory</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [5]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">from</span> geemap <span class="token keyword">import</span> chart
+
+geemap<span class="token punctuation">.</span>ee_initialize<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 1) ROI (edit if you want)</span>
+roi <span class="token operator">=</span> ee<span class="token punctuation">.</span>Geometry<span class="token punctuation">.</span>Rectangle<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">81.05</span><span class="token punctuation">,</span> <span class="token number">35.10</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.60</span><span class="token punctuation">,</span> <span class="token number">35.45</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 2) Map</span>
+m <span class="token operator">=</span> geemap<span class="token punctuation">.</span>Map<span class="token punctuation">(</span>center<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">35.2271</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">80.8431</span><span class="token punctuation">]</span><span class="token punctuation">,</span> zoom<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_basemap<span class="token punctuation">(</span><span class="token string">"HYBRID"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>roi<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"color"</span><span class="token punctuation">:</span> <span class="token string">"yellow"</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"ROI"</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token comment"># 3) Sentinel-2 SR (cloud-masked) with timestamp preserved</span>
+<span class="token keyword">def</span> <span class="token function">mask_s2_sr</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+ scl <span class="token operator">=</span> img<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"SCL"</span><span class="token punctuation">)</span>
+ mask <span class="token operator">=</span> <span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>And<span class="token punctuation">(</span>scl<span class="token punctuation">.</span>neq<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+ out <span class="token operator">=</span> img<span class="token punctuation">.</span>updateMask<span class="token punctuation">(</span>mask<span class="token punctuation">)</span><span class="token punctuation">.</span>divide<span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span>
+ <span class="token keyword">return</span> out<span class="token punctuation">.</span>copyProperties<span class="token punctuation">(</span>img<span class="token punctuation">,</span> img<span class="token punctuation">.</span>propertyNames<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2 <span class="token operator">=</span> <span class="token punctuation">(</span>ee<span class="token punctuation">.</span>ImageCollection<span class="token punctuation">(</span><span class="token string">"COPERNICUS/S2_SR_HARMONIZED"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterBounds<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span>filterDate<span class="token punctuation">(</span><span class="token string">"2026-01-01"</span><span class="token punctuation">,</span> <span class="token string">"2026-01-31"</span><span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>mask_s2_sr<span class="token punctuation">)</span>
+ <span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>ee<span class="token punctuation">.</span>Filter<span class="token punctuation">.</span>notNull<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"system:time_start"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+s2_median <span class="token operator">=</span> s2<span class="token punctuation">.</span>median<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>clip<span class="token punctuation">(</span>roi<span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>s2_median<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token string">"bands"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"B4"</span><span class="token punctuation">,</span><span class="token string">"B3"</span><span class="token punctuation">,</span><span class="token string">"B2"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Sentinel-2 RGB"</span><span class="token punctuation">)</span>
+
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [6]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"><span class="token comment"># 4) NDVI</span>
+ndvi <span class="token operator">=</span> s2_median<span class="token punctuation">.</span>normalizedDifference<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"B8"</span><span class="token punctuation">,</span><span class="token string">"B4"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+ndvi_vis <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"min"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">"max"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"palette"</span><span class="token punctuation">:</span>
+<span class="token punctuation">[</span><span class="token string">"#440154"</span><span class="token punctuation">,</span><span class="token string">"#3b528b"</span><span class="token punctuation">,</span><span class="token string">"#21918c"</span><span class="token punctuation">,</span><span class="token string">"#5ec962"</span><span class="token punctuation">,</span><span class="token string">"#fde725"</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+m<span class="token punctuation">.</span>addLayer<span class="token punctuation">(</span>ndvi<span class="token punctuation">,</span> ndvi_vis<span class="token punctuation">,</span> <span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m<span class="token punctuation">.</span>add_colorbar<span class="token punctuation">(</span>ndvi_vis<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">,</span> layer_name<span class="token operator">=</span><span class="token string">"NDVI"</span><span class="token punctuation">)</span>
+m</code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [7]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python">eemap<span class="token punctuation">.</span>ee_export_image_to_drive<span class="token punctuation">(</span>
+ image<span class="token operator">=</span>ndvi<span class="token punctuation">,</span>
+ description<span class="token operator">=</span><span class="token string">"ndvi_demo_geovis"</span><span class="token punctuation">,</span>
+ folder<span class="token operator">=</span><span class="token string">"geemap_exports"</span><span class="token punctuation">,</span>
+ region<span class="token operator">=</span>roi<span class="token punctuation">,</span>
+ scale<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
+ maxPixels<span class="token operator">=</span><span class="token number">1e13</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Export task submitted. Check the Earth Engine Tasks tab."</span><span class="token punctuation">)</span></code></pre>
+                                            </div>
+                                        </div>
+                                        <div class="nb-cell" style="display:flex; margin-bottom:10px;">
+                                            <div style="width:40px; text-align:right; padding-right:10px;">In [8]:</div>
+                                            <div style="flex-grow:1; background:#f7f7f7; padding:5px;">
+                                                <pre class="language-python" tabindex="0"><code class="language-python"></code></pre>
+                                            </div>
+                                        </div></div>
                 </div>
             </div></div>
                 <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
@@ -1516,11 +1864,11 @@
     <div class="modal-overlay" id="vizModal" onclick="closeModal()">
         <div class="close-btn" onclick="closeModal()">×</div>
         <div class="modal-card" onclick="event.stopPropagation()">
-            <div class="modal-viz"><img id="modal-img" src="https://via.placeholder.com/600x400"></div>
+            <div class="modal-viz"><img id="modal-img" src="https://biswasjayanta.github.io/Lab3_S7.png"></div>
             <div class="modal-text">
-                <h2 id="modal-title" style="margin-top:0;">Title</h2>
-                <div id="modal-desc" class="desc-text"><p>Description...</p></div>
-                <div id="modal-notebook-area" style="display:none; margin-top:20px; border-top:1px solid #eee; padding-top:20px;">
+                <h2 id="modal-title" style="margin-top:0;">Screenshot-7</h2>
+                <div id="modal-desc" class="desc-text"><p>JupyterLab: NDVI layer visible with a colorbar/legend.</p><p><br></p><p># 4) NDVI</p><p>ndvi = s2_median.normalizedDifference(["B8","B4"]).rename("NDVI")</p><p>ndvi_vis = {"min": 0, "max": 1, "palette":</p><p>["#440154","#3b528b","#21918c","#5ec962","#fde725"]}</p><p>m.addLayer(ndvi, ndvi_vis, "NDVI")</p><p>m.add_colorbar(ndvi_vis, label="NDVI", layer_name="NDVI")</p><p>m</p></div>
+                <div id="modal-notebook-area" style="display: block; margin-top: 20px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(238, 238, 238); padding-top: 20px;">
                     <h4 style="margin:0 0 10px 0;">Notebook Source:</h4>
                     <div id="modal-notebook-content" class="notebook-wrapper visible"></div>
                 </div>
@@ -2145,4 +2493,20 @@
     </script>
 
 
-</body></html>
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.2302058048591641', methodName, methodArgs }, 'https://biswasjayanta.github.io');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
