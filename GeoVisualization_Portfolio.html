@@ -639,7 +639,7 @@
 
 <body class="" data-new-gr-c-s-check-loaded="9.96.0" data-gr-ext-installed="">
 
-    <div id="autosave-toast" class="visible">
+    <div id="autosave-toast" class="">
         <div class="toast-title"><span>💾</span> Autosaved (Browser)</div>
         <div class="toast-msg">Don't forget to click "Save &amp; Download" to create a permanent file!</div>
     </div>
@@ -4604,7 +4604,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                         <div class="code-controls">
                             <div class="switch-wrapper">
-                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <label class="switch"><input type="checkbox" checked="checked"><span class="slider"></span></label>
                                 <span>Show NB in Modal</span>
                             </div>
                             <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
@@ -5405,11 +5405,11 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
     <div class="modal-overlay" id="vizModal" onclick="closeModal()">
         <div class="close-btn" onclick="closeModal()">×</div>
         <div class="modal-card" onclick="event.stopPropagation()">
-            <div class="modal-viz"><img id="modal-img" src="https://biswasjayanta.github.io/Lab3_S7.png"></div>
+            <div class="modal-viz"><img id="modal-img" src="https://biswasjayanta.github.io/clt_historical_shift_map3.png"></div>
             <div class="modal-text">
-                <h2 id="modal-title" style="margin-top:0;">Screenshot-7</h2>
-                <div id="modal-desc" class="desc-text"><p>JupyterLab: NDVI layer visible with a colorbar/legend.</p><p><br></p><p># 4) NDVI</p><p>ndvi = s2_median.normalizedDifference(["B8","B4"]).rename("NDVI")</p><p>ndvi_vis = {"min": 0, "max": 1, "palette":</p><p>["#440154","#3b528b","#21918c","#5ec962","#fde725"]}</p><p>m.addLayer(ndvi, ndvi_vis, "NDVI")</p><p>m.add_colorbar(ndvi_vis, label="NDVI", layer_name="NDVI")</p><p>m</p></div>
-                <div id="modal-notebook-area" style="display: block; margin-top: 20px; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(238, 238, 238); padding-top: 20px;">
+                <h2 id="modal-title" style="margin-top:0;">Charlotte Historical Waterbody Shifts (2001-2024)</h2>
+                <div id="modal-desc" class="desc-text"><p>Description...</p></div>
+                <div id="modal-notebook-area" style="display: none; margin-top: 20px; border-top: 1px solid rgb(238, 238, 238); padding-top: 20px;">
                     <h4 style="margin:0 0 10px 0;">Notebook Source:</h4>
                     <div id="modal-notebook-content" class="notebook-wrapper visible"></div>
                 </div>
