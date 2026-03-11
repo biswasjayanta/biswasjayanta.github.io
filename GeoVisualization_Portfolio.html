@@ -667,7 +667,7 @@
             <div class="editor-header">
                 <h3>Editing Text</h3>
             </div>
-            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>Question Answer</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
+            <div id="quill-container" class=""><div class="ql-editor" data-gramm="false" contenteditable="true"><p>Animation</p></div><div class="ql-clipboard" contenteditable="true" tabindex="-1"></div><div class="ql-tooltip ql-hidden"><a class="ql-preview" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div></div>
             <div class="editor-footer">
                 <button class="editor-btn btn-cancel" onclick="closeEditor(false)">Cancel</button>
                 <button class="editor-btn btn-ok" onclick="closeEditor(true)">Save Changes</button>
@@ -5954,6 +5954,245 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                    </div>
                 <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
                     <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Charlotte Five Years Waterbody Shifts (2020-2024)</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">💬 Peer Review &amp; Extras</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+            </div><div class="week-block" id="week-8">
+                <div class="week-header">
+                    <h2 class="editable-field" onclick="openEditor(this)">Week 8</h2>
+                    <button class="delete-btn" onclick="deleteElement(this, event)">🗑️ Delete Week</button>
+                </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">💻 Labs &amp; Exercises</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">📊 Good vs Bad Viz</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="https://via.placeholder.com/600x400" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'standard')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">📖 Reading Reflections</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="text" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)">Title</h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Reflections...</p></div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div></div>
+                <div class="add-area-small" onclick="addGalleryItem(this, 'text')">+ Add Item</div>
+            </div>
+                <div class="category-section">
+                <div class="category-title editable-field" onclick="openEditor(this)">🚀 Project Progress</div>
+                <div class="gallery-grid"><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_1.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-1</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_2.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-2</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_3.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-3</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_4.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-4</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_5.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-5</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="frame_6.png" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Frame-6</p></h3>
+                    <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
+                    
+                        <div class="code-controls">
+                            <div class="switch-wrapper">
+                                <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+                                <span>Show NB in Modal</span>
+                            </div>
+                            <div class="upload-area"><input type="file" accept=".ipynb,.py" onchange="handleNotebookUpload(this)"></div>
+                        </div>
+                    
+                    <div class="notebook-wrapper"></div>
+                </div>
+            </div><div class="gallery-item" data-type="standard" onclick="openModal(this)">
+                <button class="delete-btn" onclick="deleteElement(this, event)">🗑️</button>
+                <div class="img-container">
+                        <img class="viz-source" src="Animation_of_Changing_Waterbodies.mp4" alt="Viz">
+                        <label class="file-upload-overlay">Change Img <input type="file" hidden="" onchange="updateCardImage(this)"></label>
+                   </div>
+                <div class="item-data" onclick="if (isEditing) event.stopPropagation()">
+                    <h3 class="editable-field item-title" onclick="openEditor(this)"><p>Animation</p></h3>
                     <div class="editable-field desc-text" onclick="openEditor(this)"><p>Description...</p></div>
                     
                         <div class="code-controls">
