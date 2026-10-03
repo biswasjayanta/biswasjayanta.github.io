@@ -1,0 +1,1242 @@
+{
+  "": "https://json-schema.org/draft/2020-12/schema",
+  "metadata": {
+    "generated_for": "Jayanta Biswas",
+    "version": "1.0.0",
+    "last_updated": "2026-10-03",
+    "target_platform": "biswasjayanta.github.io (Google Antigravity Frontend)"
+  },
+  "Profile": [
+    {
+      "name": "Jayanta Biswas",
+      "preferred_name": "Jayanta",
+      "title": "PhD Student in Geography & Graduate Research Assistant",
+      "short_bio": "Spatial Geographer and GeoAI researcher specializing in knowledge-guided deep learning, fine-scale human mobility downscaling, satellite remote sensing, and spatial epidemiology.",
+      "about": "I am a PhD student in Geography at the University of North Carolina at Charlotte (UNC Charlotte), working in the GeoHealth Dynamics Research (GeoHDR) Lab and Center for Applied Geographic Information Science (CAGIS) under the advisement of Dr. Yao Li. My research bridges GeoAI, deep learning ensembles, remote sensing, and spatial epidemiology to tackle global health challenges\u2014such as precision malaria transmission modeling in sub-Saharan Africa. Prior to UNC Charlotte, I earned an M.Sc. in Earth Sciences from the University of Memphis, focusing on spatial econometrics and induced travel demand with TDOT/FHWA, and urban planning degrees from Khulna University, Bangladesh.",
+      "affiliations": [
+        {
+          "role": "Doctoral Student & Graduate Research Assistant",
+          "department": "Department of Earth, Environmental, and Geographical Sciences (EEGS)",
+          "lab": "GeoHealth Dynamics Research (GeoHDR) Lab",
+          "center": "Center for Applied Geographic Information Science (CAGIS)",
+          "institution": "University of North Carolina at Charlotte",
+          "location": "Charlotte, NC, USA",
+          "advisor": "Dr. Yao Li",
+          "period": "Jan 2026 \u2013 Present"
+        },
+        {
+          "role": "Graduate Research Assistant",
+          "department": "Department of Earth Sciences",
+          "institution": "The University of Memphis",
+          "location": "Memphis, TN, USA",
+          "advisor": "Dr. Angela Antipova",
+          "period": "Jan 2024 \u2013 Dec 2025"
+        }
+      ],
+      "contact": {
+        "email": "jbiswas@charlotte.edu",
+        "phone": "+1 (901) 297-9395",
+        "office": "McEniry Building, Department of Earth, Environmental and Geographical Sciences, UNC Charlotte",
+        "address": {
+          "street": "9201 University City Blvd",
+          "building": "McEniry Building",
+          "city": "Charlotte",
+          "state": "NC",
+          "zip": "28223",
+          "country": "USA"
+        }
+      },
+      "links": {
+        "github": "https://github.com/biswasjayanta",
+        "google_scholar": "https://scholar.google.com/citations?user=XyRB7ekAAAAJ&hl=en",
+        "google_site": "https://sites.google.com/view/jayanta-biswas/home",
+        "linkedin": "https://www.linkedin.com/in/biswas-jayanta/",
+        "github_pages": "https://biswasjayanta.github.io",
+        "geohdr_lab": "https://geohdrlab.com"
+      },
+      "scholar_metrics": {
+        "citations": 172,
+        "scholar_id": "XyRB7ekAAAAJ",
+        "verified_email_domain": "charlotte.edu"
+      },
+      "research_interests": [
+        "GeoAI & Knowledge-Guided Deep Learning",
+        "Spatial Downscaling & Multi-Source Geospatial Data Fusion",
+        "Remote Sensing of Human\u2013Environment Interaction",
+        "Spatial Epidemiology & Precision Public Health Modeling",
+        "Transportation Planning & Induced Travel Demand",
+        "Urban Environmental Sustainability & Ecological Indicators (RSEI)"
+      ],
+      "education": [
+        {
+          "degree": "Ph.D. in Geography",
+          "institution": "University of North Carolina at Charlotte",
+          "location": "Charlotte, NC, USA",
+          "period": "Jan 2026 \u2013 Present",
+          "advisor": "Dr. Yao Li",
+          "research_topic": "GeoAI downscaling of human mobility data (5.5 km \u2192 100 m) for precision malaria modeling in Zambia (NSF Award #2451156)"
+        },
+        {
+          "degree": "M.Sc. in Earth Sciences",
+          "institution": "The University of Memphis",
+          "location": "Memphis, TN, USA",
+          "period": "Jan 2024 \u2013 Dec 2025",
+          "advisor": "Dr. Angela Antipova",
+          "thesis_title": "Road Improvement Impact on Induced Travel",
+          "honors": "Outstanding Earth Scientist Award Nominee"
+        },
+        {
+          "degree": "Graduate Certificate in Geographic Information Systems (GIS)",
+          "institution": "The University of Memphis",
+          "location": "Memphis, TN, USA",
+          "period": "May 2025 \u2013 Dec 2025"
+        },
+        {
+          "degree": "Master of Urban and Rural Planning (MURP)",
+          "institution": "Khulna University",
+          "location": "Khulna, Bangladesh",
+          "period": "Jul 2022 \u2013 Jan 2024",
+          "thesis_title": "Mobility Operations for First and Last Mile of Public Transport Connection: A Case Study of MRT-6, Dhaka",
+          "advisor": "Dr. Md Ahsanul Kabir"
+        },
+        {
+          "degree": "Bachelor of Urban and Rural Planning (BURP)",
+          "institution": "Khulna University",
+          "location": "Khulna, Bangladesh",
+          "period": "Jan 2017 \u2013 Mar 2022",
+          "thesis_title": "Changing Accessibility in Dhaka: Role of MRT-6 and Integration with Lower Order Public Transport System",
+          "advisor": "Dr. Md Ahsanul Kabir"
+        }
+      ],
+      "research_experience": [
+        {
+          "role": "Graduate Research Assistant",
+          "lab": "GeoHealth Dynamics Research (GeoHDR) Lab",
+          "institution": "University of North Carolina at Charlotte",
+          "period": "Jan 2026 \u2013 Present",
+          "pi": "Dr. Yao Li",
+          "grant": "NSF Award #2451156",
+          "project_title": "Deep learning-enhanced geospatial modeling for highlighting active disease transmission hotspots through accurate Human-Vector Contact Zones (HVCZ) prediction",
+          "highlights": [
+            "Built a mass-conserving U-Net deep ensemble in PyTorch to downscale Meta human mobility data from ~5.5 km to 100 m grid across Zambia.",
+            "Engineered 38 environmental covariate layers at 100 m in Google Earth Engine (building footprints, road networks, nighttime lights, terrain, bioclimatic layers).",
+            "Incorporated annual WorldPop rasters to convert Meta activity counts into population-weighted mobility arrays.",
+            "Executed spatial block cross-validation across distinct agro-ecological and urban/rural zones to test spatial transferability.",
+            "Decomposed pixel-level uncertainties into epistemic and aleatoric variance, validating against Voronoi catchments from mobile Call Detail Records (CDR)."
+          ]
+        },
+        {
+          "role": "Graduate Research Assistant",
+          "department": "Department of Earth Sciences",
+          "institution": "The University of Memphis",
+          "period": "Jan 2024 \u2013 Dec 2025",
+          "pi": "Dr. Angela Antipova",
+          "grant": "TDOT / FHWA Project RES2024-02",
+          "project_title": "Applying Induced Travel Study in Urban Areas in Tennessee",
+          "highlights": [
+            "Estimated causal effects of lane-mile capacity expansions on VMT and AADT using facility-level OLS and 2SLS instrumental variable regression.",
+            "Overcame area-wide aggregation bias present in state-level induced travel studies.",
+            "Developed spatial econometric regression models tying historical satellite-derived land development (1985\u20132023) to highway improvements, published in Land (2025)."
+          ],
+          "report_url": "https://rosap.ntl.bts.gov/view/dot/92824",
+          "pdf_url": "https://rosap.ntl.bts.gov/view/dot/92824/dot_92824_DS1.pdf",
+          "corporate_creator": "Center for Applied Earth Science and Engineering Research (CAESER), The University of Memphis",
+          "sponsors": [
+            "Tennessee Department of Transportation (TDOT)",
+            "Federal Highway Administration (FHWA)"
+          ]
+        },
+        {
+          "role": "Graduate Research Assistant",
+          "institution": "Khulna University",
+          "period": "Jul 2022 \u2013 Dec 2023",
+          "pi": "Dr. Md Ahsanul Kabir",
+          "project_title": "First and Last Mile Investigation of Mass Rapid Transit 6 (MRT-6), Dhaka, Bangladesh",
+          "highlights": [
+            "Conducted meta-analysis using the PRISMA framework on first/last-mile transit access.",
+            "Administered station-based intercept surveys and calibrated statistical access-choice models for MRT-6."
+          ]
+        },
+        {
+          "role": "Undergraduate Research Assistant",
+          "institution": "Khulna University",
+          "period": "Jan 2020 \u2013 Dec 2022",
+          "pi": "Dr. Md Ahsanul Kabir",
+          "project_title": "Potential Accessibility Investigation of Mass Rapid Transit 6 (MRT-6) Integrated with Lower-order Public Transport System, Dhaka, Bangladesh",
+          "highlights": [
+            "Built comprehensive multimodal network datasets with topological validation.",
+            "Modeled potential accessibility scenarios and simulated transit-oriented urban growth."
+          ]
+        }
+      ],
+      "professional_experience": [
+        {
+          "role": "Research Associate",
+          "organization": "Planning and Development Research Center (PDRC)",
+          "location": "Khulna, Bangladesh",
+          "period": "May 2022 \u2013 Dec 2023",
+          "description": "Led feasibility analyses for residential and municipal transport infrastructure projects; three spatial plans were formally approved by city authorities."
+        },
+        {
+          "role": "Assistant Planner (Contractual/Remote)",
+          "organization": "Preparation of Chattogram Metropolitan Master Plan (2020\u20132041)",
+          "location": "Chattogram, Bangladesh",
+          "period": "2022",
+          "description": "Assisted in spatial land use zoning and long-range transport infrastructure planning for the Chattogram metropolitan area."
+        },
+        {
+          "role": "Research Assistant",
+          "organization": "UNDP & SIDA Program on Environment and Climate Change",
+          "location": "Khulna, Bangladesh",
+          "period": "Nov 2021 \u2013 Apr 2022",
+          "description": "Conducted household surveys, key informant interviews, and focus group discussions evaluating coastal community food security and climate vulnerability."
+        },
+        {
+          "role": "Technical Intern",
+          "organization": "Local Government Engineering Department (LGED), 'My Village My Town' Project",
+          "location": "Dhaka, Bangladesh",
+          "period": "Jan 2022 \u2013 Feb 2022",
+          "description": "Supported spatial infrastructure mapping and rural road hierarchy planning."
+        },
+        {
+          "role": "Assistant GIS Trainer",
+          "organization": "Forestry Discipline, Khulna University",
+          "location": "Khulna, Bangladesh",
+          "period": "2021",
+          "description": "Delivered hands-on training sessions on Google Earth Engine (GEE), cloud geoprocessing, and environmental raster analysis."
+        }
+      ],
+      "awards_and_honors": [
+        {
+          "award": "First Place (Winner) - Graduate Student Showcase",
+          "issuer": "2nd Annual Memphis Area Geographic Information Council (MAGIC) Collegiate Showcase",
+          "year": 2025,
+          "location": "Memphis, TN",
+          "project": "Exploring the relationship between road improvements, employment, and land development in Tennessee"
+        },
+        {
+          "award": "Graduate Student Association (GSA) Award",
+          "issuer": "The University of Memphis",
+          "year": 2025,
+          "location": "Memphis, TN"
+        },
+        {
+          "award": "Nominee, Outstanding Earth Scientist Award (Geography Concentration)",
+          "issuer": "Department of Earth Sciences, The University of Memphis",
+          "year": 2025,
+          "location": "Memphis, TN"
+        },
+        {
+          "award": "National Science and Technology (NST) Fellowship",
+          "issuer": "Ministry of Science and Technology, Government of Bangladesh",
+          "year": 2022,
+          "amount": ""
+        }
+      ],
+      "technical_skills": {
+        "programming_languages": [
+          "Python",
+          "R",
+          "SQL",
+          "JavaScript (Google Earth Engine)",
+          "C++",
+          "HTML/CSS"
+        ],
+        "machine_learning_deep_learning": [
+          "PyTorch",
+          "TensorFlow",
+          "scikit-learn",
+          "Hugging Face Transformers & Diffusers",
+          "U-Net Ensembles",
+          "XGBoost",
+          "Random Forest",
+          "Support Vector Machines (SVM)",
+          "Spatial Block Cross-Validation",
+          "Mass-Conserving Pycnophylactic Interpolation"
+        ],
+        "geospatial_technologies": [
+          "Google Earth Engine (GEE)",
+          "ArcGIS Pro",
+          "ArcGIS Desktop",
+          "QGIS",
+          "ERDAS Imagine",
+          "GeoDa",
+          "Open Source Routing Machine (OSRM)",
+          "GeoPandas",
+          "Rasterio",
+          "Shapely",
+          "Xarray"
+        ],
+        "spatial_econometrics_statistics": [
+          "Spatial Lag & Spatial Error Models (SAR/SEM)",
+          "Two-Stage Least Squares (2SLS) Instrumental Variables",
+          "Ordinary Least Squares (OLS)",
+          "Entropy Weight Method (EWM)",
+          "Principal Component Analysis (PCA)",
+          "PRISMA Systematic Review",
+          "SPSS",
+          "SAS"
+        ],
+        "visualization_design": [
+          "Matplotlib / Seaborn",
+          "Folium / Leaflet",
+          "Microsoft Power BI",
+          "Adobe Illustrator",
+          "Adobe Photoshop",
+          "AutoCAD",
+          "LaTeX"
+        ]
+      },
+      "certifications": [
+        {
+          "title": "ArcGIS Pro Basics, Editing, and Querying Data",
+          "issuer": "Esri Training",
+          "year": 2024
+        },
+        {
+          "title": "GIS, Mapping, and Spatial Analysis Specialization",
+          "issuer": "University of Toronto (Coursera)",
+          "year": 2021
+        },
+        {
+          "title": "Geographic Information Systems (GIS) Specialization",
+          "issuer": "University of California, Davis (Coursera)",
+          "year": 2019
+        },
+        {
+          "title": "Applied Data Science Specialization & IBM Data Science Professional Certificate",
+          "issuer": "IBM (Coursera)",
+          "year": 2022
+        },
+        {
+          "title": "Spatial Data Science and Applications",
+          "issuer": "Yonsei University (Coursera)",
+          "year": 2019
+        },
+        {
+          "title": "Remote Sensing and GIS Technology and Applications",
+          "issuer": "Centre for Space Science and Technology Education in Asia and the Pacific (CSSTEAP - UN Affiliated)",
+          "location": "Dehradun, India"
+        }
+      ],
+      "professional_memberships": [
+        "American Association of Geographers (AAG)",
+        "University Consortium for Geographic Information Science (UCGIS)",
+        "Bangladesh Institute of Planners (BIP)"
+      ]
+    }
+  ],
+  "Publications": [
+    {
+      "id": "pub-2026-rsei-100rc",
+      "title": "Improved remote sensing ecological index for monitoring urban sustainability: 100 resilient cities vs. non-resilient cities in South Asia",
+      "authors": [
+        "Jayanta Biswas",
+        "Niloy Biswas"
+      ],
+      "lead_author": "Jayanta Biswas",
+      "journal": "Environmental Monitoring and Assessment",
+      "journal_abbrev": "Environ Monit Assess",
+      "volume": "198",
+      "issue": "4",
+      "article_number": "309",
+      "year": 2026,
+      "month": "March",
+      "doi": "10.1007/s10661-026-15156-w",
+      "doi_url": "https://doi.org/10.1007/s10661-026-15156-w",
+      "scholar_url": "https://scholar.google.com/scholar?q=Improved+remote+sensing+ecological+index+for+monitoring+urban+sustainability+100+resilient+cities+Jayanta+Biswas",
+      "related_repository": "https://github.com/biswasjayanta/100RCImproved-RSEI",
+      "tags": [
+        "Remote Sensing",
+        "Improved RSEI",
+        "Urban Sustainability",
+        "100 Resilient Cities",
+        "South Asia",
+        "Chattogram",
+        "Pune",
+        "Surat",
+        "Nagpur"
+      ],
+      "abstract": "This study develops an improved Remote Sensing Ecological Index (RSEI) to evaluate urban ecological environment quality across four South Asian cities, comparing designated 100 Resilient Cities (Pune and Surat) with non-100RC counterparts (Chattogram and Nagpur) to examine how resilience frameworks impact environmental sustainability over decadal timescales."
+    },
+    {
+      "id": "report-2026-tdot-induced-travel",
+      "title": "Applying Induced Travel Study in Urban Areas in Tennessee",
+      "authors": [
+        "Angela Antipova",
+        "Sabya Mishra",
+        "Aman Agrawal",
+        "Jayanta Biswas"
+      ],
+      "lead_author": "Angela Antipova",
+      "publication_type": "Technical Report",
+      "report_number": "RES2024-02",
+      "journal": "Tennessee Department of Transportation & Federal Highway Administration (USDOT National Transportation Library)",
+      "journal_abbrev": "TDOT / FHWA Tech Report",
+      "year": 2026,
+      "month": "July",
+      "corporate_creator": "Center for Applied Earth Science and Engineering Research (CAESER), The University of Memphis",
+      "sponsors": [
+        "Tennessee Department of Transportation (TDOT)",
+        "Federal Highway Administration (FHWA)"
+      ],
+      "url": "https://rosap.ntl.bts.gov/view/dot/92824",
+      "pdf_url": "https://rosap.ntl.bts.gov/view/dot/92824/dot_92824_DS1.pdf",
+      "scholar_url": "https://scholar.google.com/scholar?q=Applying+Induced+Travel+Study+in+Urban+Areas+in+Tennessee+Angela+Antipova+Jayanta+Biswas",
+      "related_project": "TDOT/FHWA RES2024-02 Induced Travel Study",
+      "tags": [
+        "Induced Travel",
+        "Transportation Planning",
+        "Instrumental Variables",
+        "Vehicle Miles Traveled",
+        "TDOT",
+        "FHWA",
+        "Capacity Enhancement",
+        "Tennessee"
+      ],
+      "abstract": "Investigates the causal impacts of highway capacity additions (road widening, new lane construction) on travel behavior and induced vehicle miles traveled (VMT) across urban corridors in Tennessee. By developing disaggregated facility-level instrumental variables, this study overcomes the area-wide aggregation bias of prior state-level research, providing empirical elasticity estimates to inform TDOT project screening, capital allocation, and sustainable regional planning."
+    },
+    {
+      "id": "pub-2025-geoai-wildfire",
+      "title": "Mapping wildfire dynamics: GeoAI-driven comparative analysis of deep and machine learning ensembles for susceptibility prediction in California",
+      "authors": [
+        "Niloy Biswas",
+        "Jayanta Biswas",
+        "Imtiaz Ul Shahid",
+        "Mahmudul Hasan Sabuj"
+      ],
+      "lead_author": "Niloy Biswas",
+      "journal": "Geomatica",
+      "volume": "77",
+      "issue": "2",
+      "article_number": "100081",
+      "year": 2025,
+      "doi": "10.1016/j.geomat.2025.100081",
+      "doi_url": "https://doi.org/10.1016/j.geomat.2025.100081",
+      "scholar_url": "https://scholar.google.com/scholar?q=Mapping+wildfire+dynamics+GeoAI-driven+comparative+analysis+Niloy+Biswas+Jayanta+Biswas",
+      "related_repository": "https://github.com/biswasjayanta/Geospatial_Workflows",
+      "tags": [
+        "GeoAI",
+        "Wildfire Susceptibility",
+        "Deep Learning",
+        "Machine Learning Ensembles",
+        "California",
+        "Spatial Realism"
+      ],
+      "abstract": "Investigates wildfire susceptibility across California through a rigorous comparative benchmarking of machine learning ensembles and deep neural networks. Evaluates both quantitative predictive accuracy and the spatial realism of hazard surfaces under computational constraints."
+    },
+    {
+      "id": "pub-2025-land-development-tennessee",
+      "title": "Land development 1985\u20132023 as a function of road improvement, employment, and mobility: A case study of Tennessee",
+      "authors": [
+        "Jayanta Biswas",
+        "Anzhelika Antipova"
+      ],
+      "lead_author": "Jayanta Biswas",
+      "journal": "Land",
+      "volume": "14",
+      "issue": "5",
+      "article_number": "1025",
+      "year": 2025,
+      "month": "May",
+      "doi": "10.3390/land14051025",
+      "doi_url": "https://doi.org/10.3390/land14051025",
+      "scholar_url": "https://scholar.google.com/scholar?q=Land+development+1985\u20132023+as+a+function+of+road+improvement+employment+and+mobility+Jayanta+Biswas",
+      "related_project": "TDOT/FHWA Induced Travel Study (RES2024-02)",
+      "tags": [
+        "Land Development",
+        "Induced Travel",
+        "Spatial Econometrics",
+        "Highway Capacity",
+        "Tennessee",
+        "VMT",
+        "TDOT"
+      ],
+      "abstract": "Quantifies the spatial relationships between highway capacity additions, regional employment density, and urban land transformation across Tennessee from 1985 to 2023. Spatial regression models demonstrate that employment access acts as a widespread catalyst for urban expansion, whereas mobility (VMT) exhibits concentrated effects along higher-speed arterials."
+    },
+    {
+      "id": "pub-2025-rsei-bangladesh-entropy",
+      "title": "Urban environmental degradation in Bangladesh: Insights from a weighted entropy ecological index",
+      "authors": [
+        "Jayanta Biswas"
+      ],
+      "lead_author": "Jayanta Biswas",
+      "journal": "Next Research",
+      "volume": "2",
+      "issue": "2",
+      "article_number": "100386",
+      "year": 2025,
+      "doi": "10.1016/j.nexres.2025.100386",
+      "doi_url": "https://doi.org/10.1016/j.nexres.2025.100386",
+      "scholar_url": "https://scholar.google.com/scholar?q=Urban+environmental+degradation+in+Bangladesh+Insights+from+a+weighted+entropy+ecological+index+Jayanta+Biswas",
+      "related_repository": "https://github.com/biswasjayanta/Urban-Degradation-using-RSEI",
+      "tags": [
+        "Urban Environmental Degradation",
+        "Remote Sensing Ecological Index",
+        "Entropy Weight Method",
+        "Bangladesh",
+        "Google Earth Engine"
+      ],
+      "abstract": "Introduces an objective entropy-weighted formulation of the Remote Sensing Ecological Index (RSEI) to mitigate the subjectivity of PCA-based weighting and better account for moisture and water regimes across 12 major cities in Bangladesh, providing evidence for targeted urban environmental mitigation."
+    },
+    {
+      "id": "pub-2025-saint-martin-tourism",
+      "title": "Tourism and environmental change in Saint Martin Island, Bangladesh: Insights from remote sensing data",
+      "authors": [
+        "Jayanta Biswas",
+        "Tanmoy Malaker",
+        "Taposh Mollick"
+      ],
+      "lead_author": "Jayanta Biswas",
+      "journal": "Remote Sensing Applications: Society and Environment",
+      "journal_abbrev": "Remote Sens Appl Soc Environ",
+      "volume": "37",
+      "article_number": "101484",
+      "year": 2025,
+      "doi": "10.1016/j.rsase.2025.101484",
+      "doi_url": "https://doi.org/10.1016/j.rsase.2025.101484",
+      "scholar_url": "https://scholar.google.com/scholar?q=Tourism+and+environmental+change+in+Saint+Martin+Island+Bangladesh+Jayanta+Biswas",
+      "related_repository": "https://github.com/biswasjayanta/TourismRemoteSensing",
+      "tags": [
+        "Tourism Ecology",
+        "Saint Martin Island",
+        "Sentinel-2",
+        "LULC Dynamics",
+        "Coral Ecosystem",
+        "Coastal Conservation"
+      ],
+      "abstract": "Utilizes high-resolution Sentinel-2 multispectral time series (2018\u20132024) to evaluate the environmental footprint of uncontrolled tourism development on Bangladesh's sole coral reef island, reaching classification accuracies of 94.6%\u201398.9% and documenting critical loss of vegetation and beach habitat."
+    },
+    {
+      "id": "pub-2023-heliyon-chattogram-lulc",
+      "title": "Mapping and monitoring land use land cover dynamics employing Google Earth Engine and machine learning algorithms on Chattogram, Bangladesh",
+      "authors": [
+        "Jayanta Biswas",
+        "Md. Abu Jobaer",
+        "Salman F. Haque",
+        "Md. S. Islam Shozib",
+        "Zamil A. Limon"
+      ],
+      "lead_author": "Jayanta Biswas",
+      "journal": "Heliyon",
+      "volume": "9",
+      "issue": "11",
+      "article_number": "e21245",
+      "year": 2023,
+      "month": "November",
+      "doi": "10.1016/j.heliyon.2023.e21245",
+      "doi_url": "https://doi.org/10.1016/j.heliyon.2023.e21245",
+      "scholar_url": "https://scholar.google.com/scholar?q=Mapping+and+monitoring+land+use+land+cover+dynamics+employing+Google+Earth+Engine+Chattogram+Jayanta+Biswas",
+      "related_repository": "https://github.com/biswasjayanta/Google-Earth-Engine",
+      "tags": [
+        "Google Earth Engine",
+        "Random Forest",
+        "SVM",
+        "LULC Dynamics",
+        "Chattogram",
+        "Cloud Geoprocessing"
+      ],
+      "abstract": "Leverages cloud computing on Google Earth Engine to train and evaluate supervised machine learning classifiers (Random Forest, SVM, Classification and Regression Trees) across multitemporal Landsat data, charting over two decades of rapid urbanization and vegetative fragmentation in Chattogram."
+    },
+    {
+      "id": "pub-2023-fkws-wildlife-sanctuary",
+      "title": "Spatiotemporal change detection of land use land cover (LULC) in Fashiakhali Wildlife Sanctuary (FKWS) impact area, Bangladesh employing remote sensing",
+      "authors": [
+        "M. S. Hossain",
+        "M. A. H. Khan",
+        "T. V. Oluwajuwon",
+        "Jayanta Biswas",
+        "S. M. Rubaiot Abdullah",
+        "M. S. S. I. Tanvir",
+        "S. Munira",
+        "M. N. A. Chowdhury"
+      ],
+      "lead_author": "M. S. Hossain",
+      "journal": "Modeling Earth Systems and Environment",
+      "volume": "9",
+      "issue": "3",
+      "pages": "3151\u20133173",
+      "year": 2023,
+      "doi": "10.1007/s40808-022-01653-7",
+      "doi_url": "https://doi.org/10.1007/s40808-022-01653-7",
+      "scholar_url": "https://scholar.google.com/scholar?q=Spatiotemporal+change+detection+of+land+use+land+cover+in+Fashiakhali+Wildlife+Sanctuary+Biswas",
+      "tags": [
+        "Wildlife Sanctuary",
+        "Protected Area Conservation",
+        "LULC",
+        "Multispectral Imagery",
+        "Fashiakhali",
+        "Habitat Encroachment"
+      ],
+      "abstract": "Employs satellite image processing and GIS-based change detection to analyze habitat encroachment, agricultural conversion, and forest fragmentation in the peripheral buffer zone of Fashiakhali Wildlife Sanctuary over a 30-year period."
+    },
+    {
+      "id": "pub-2023-bhawal-national-park",
+      "title": "Land-use change and forest cover depletion in Bhawal National Park, Gazipur, Bangladesh from 2005 to 2020",
+      "authors": [
+        "Md. Mahfuz Ur Rahman",
+        "Tanmoy Dey",
+        "Jayanta Biswas"
+      ],
+      "lead_author": "Md. Mahfuz Ur Rahman",
+      "journal": "Environmental Monitoring and Assessment",
+      "journal_abbrev": "Environ Monit Assess",
+      "volume": "195",
+      "issue": "1",
+      "article_number": "201",
+      "year": 2023,
+      "doi": "10.1007/s10661-022-10764-8",
+      "doi_url": "https://doi.org/10.1007/s10661-022-10764-8",
+      "scholar_url": "https://scholar.google.com/scholar?q=Land-use+change+and+forest+cover+depletion+in+Bhawal+National+Park+Biswas",
+      "tags": [
+        "Forest Cover Depletion",
+        "Bhawal National Park",
+        "NDVI",
+        "Deforestation",
+        "Urban Sprawl",
+        "Gazipur"
+      ],
+      "abstract": "Quantifies the depletion of over 2,284 hectares (~49%) of canopy cover in Bhawal National Park between 2005 and 2020 using Landsat-derived NDVI and land-use transition matrices, identifying industrialization and illegal settlement expansion as core drivers."
+    }
+  ],
+  "Presentations": [
+    {
+      "id": "pres-2026-ucgis-zambia-mobility",
+      "title": "A deep learning framework for fusing multi-modal environmental data to downscale human mobility for precision malaria modeling in Zambia",
+      "authors": [
+        "Jayanta Biswas\u2020",
+        "Noah Kroll\u2020",
+        "Amy Wesolowski",
+        "Arun Sharma",
+        "Shengjie Lai",
+        "Andrew Tatem",
+        "Yao Li"
+      ],
+      "presenters": [
+        "Jayanta Biswas",
+        "Noah Kroll"
+      ],
+      "notes": "\u2020Equal contribution",
+      "conference": "2026 UCGIS Symposium",
+      "organizer": "University Consortium for Geographic Information Science (UCGIS)",
+      "location": "University of Maryland, College Park, MD, USA",
+      "date": "2026-06",
+      "year": 2026,
+      "presentation_type": "Symposium Presentation / Poster",
+      "related_project": "NSF Award #2451156 (GeoHDR Lab, PI: Dr. Yao Li)",
+      "related_repositories": [
+        "https://github.com/biswasjayanta/human-mobility-downscaling",
+        "https://github.com/biswasjayanta/zambia_mobility"
+      ],
+      "abstract": "Presents a novel GeoAI deep learning architecture (U-Net deep ensemble) that fuses 38 environmental and infrastructural covariates from Google Earth Engine with annual WorldPop surfaces to downscale aggregate Meta mobility counts (~5.5 km) to a fine 100 m resolution across Zambia under pycnophylactic mass conservation constraints, enabling accurate Human-Vector Contact Zone (HVCZ) malaria risk mapping.",
+      "tags": [
+        "GeoAI",
+        "Deep Learning",
+        "Human Mobility Downscaling",
+        "Malaria Modeling",
+        "Zambia",
+        "PyTorch",
+        "Google Earth Engine"
+      ]
+    },
+    {
+      "id": "pres-2025-sedaag-tennessee-land",
+      "title": "A spatial perspective on urban land growth: Infrastructure, employment, mobility, and land use change in Tennessee",
+      "authors": [
+        "Jayanta Biswas"
+      ],
+      "presenters": [
+        "Jayanta Biswas"
+      ],
+      "conference": "80th Annual Meeting of the Southeastern Division of the American Association of Geographers (SEDAAG 2025)",
+      "organizer": "SEDAAG / American Association of Geographers",
+      "location": "Southeastern Region, USA",
+      "date": "2025-11",
+      "year": 2025,
+      "presentation_type": "Oral Presentation",
+      "related_publication": "https://doi.org/10.3390/land14051025",
+      "abstract": "Examines how highway capacity projects, spatial employment density clusters, and vehicular mobility jointly drove parcel-level urban growth across Tennessee between 1985 and 2023 using spatial autoregressive econometric modeling.",
+      "tags": [
+        "SEDAAG",
+        "Urban Land Growth",
+        "Spatial Econometrics",
+        "Highway Infrastructure",
+        "Tennessee"
+      ]
+    },
+    {
+      "id": "pres-2025-magic-student-showcase",
+      "title": "Exploring the relationship between road improvements, employment, and land development in Tennessee",
+      "authors": [
+        "Jayanta Biswas",
+        "Anzhelika Antipova"
+      ],
+      "presenters": [
+        "Jayanta Biswas"
+      ],
+      "conference": "2nd Annual Memphis Area Geographic Information Council (MAGIC) Collegiate Geospatial Showcase",
+      "organizer": "Memphis Area Geographic Information Council (MAGIC)",
+      "location": "Memphis, TN, USA",
+      "date": "2025",
+      "year": 2025,
+      "presentation_type": "Collegiate Competition Showcase",
+      "awards": [
+        "First Place (Winner) - Graduate Category"
+      ],
+      "url": "https://midsouthgis.org",
+      "related_publication": "https://doi.org/10.3390/land14051025",
+      "abstract": "First-place award-winning presentation demonstrating spatial modeling workflows to isolate the localized versus regional developmental impacts of road improvements in Tennessee, accounting for accessibility differentials and employment centers.",
+      "tags": [
+        "MAGIC",
+        "GIS Award",
+        "First Place",
+        "Land Development",
+        "Tennessee",
+        "Induced Travel"
+      ]
+    },
+    {
+      "id": "pres-2025-memphis-grad-forum",
+      "title": "Exploring the road improvement impact on induced travel in Tennessee",
+      "authors": [
+        "Jayanta Biswas",
+        "Anzhelika Antipova"
+      ],
+      "presenters": [
+        "Jayanta Biswas"
+      ],
+      "conference": "Graduate Student Research Forum",
+      "organizer": "The University of Memphis",
+      "location": "Memphis, TN, USA",
+      "date": "2025",
+      "year": 2025,
+      "presentation_type": "Research Forum Presentation",
+      "related_project": "TDOT/FHWA RES2024-02",
+      "abstract": "Investigates facility-level induced travel demand across Tennessee highway corridors using 2SLS instrumental variable regression, highlighting policy implications for state transportation funding and capacity screening criteria.",
+      "tags": [
+        "Induced Travel",
+        "TDOT",
+        "2SLS Instrumental Variables",
+        "Traffic Forecasting",
+        "VMT"
+      ]
+    },
+    {
+      "id": "pres-2025-iis-seminar",
+      "title": "Induced travel: An illusion in traffic demand management",
+      "authors": [
+        "Jayanta Biswas"
+      ],
+      "presenters": [
+        "Jayanta Biswas"
+      ],
+      "conference": "Institute for Intelligent Systems (IIS) Seminar Series",
+      "organizer": "Institute for Intelligent Systems, The University of Memphis",
+      "location": "Memphis, TN, USA",
+      "date": "2025",
+      "year": 2025,
+      "presentation_type": "Invited Seminar",
+      "abstract": "Critical evaluation of historical traffic demand management paradigms, analyzing whether highway capacity expansions induce demand or merely absorb latent regional mobility needs.",
+      "tags": [
+        "Traffic Demand Management",
+        "Transportation Policy",
+        "IIS",
+        "Highway Economics"
+      ]
+    }
+  ],
+  "Repositories": [
+    {
+      "id": "repo-human-mobility-downscaling",
+      "name": "human-mobility-downscaling",
+      "full_name": "biswasjayanta/human-mobility-downscaling",
+      "url": "https://github.com/biswasjayanta/human-mobility-downscaling",
+      "description": "Deep learning framework utilizing U-Net ensembles to downscale 5.5 km Facebook/Meta Activity Statistics Mobility rasters to 100 m human mobility surfaces under mass-conserving pycnophylactic constraints.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "GeoAI & Deep Learning",
+      "domain": "Spatial Epidemiology & Deep Learning",
+      "is_featured": true,
+      "updated_at": "2026-06-30T16:42:25Z",
+      "related_presentation": "pres-2026-ucgis-zambia-mobility",
+      "related_project": "NSF Award #2451156 (GeoHDR Lab, UNC Charlotte)",
+      "tags": [
+        "Deep Learning",
+        "U-Net",
+        "PyTorch",
+        "Mobility Downscaling",
+        "GeoAI",
+        "Malaria Modeling",
+        "Zambia"
+      ]
+    },
+    {
+      "id": "repo-zambia-mobility",
+      "name": "zambia_mobility",
+      "full_name": "biswasjayanta/zambia_mobility",
+      "url": "https://github.com/biswasjayanta/zambia_mobility",
+      "description": "Interactive web mapping dashboard and visualization interface displaying fine-scale (100 m) human mobility layers and malaria risk zones across Zambia.",
+      "primary_language": "HTML",
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Interactive Geospatial Visualization",
+      "is_featured": true,
+      "updated_at": "2026-08-28T13:17:18Z",
+      "related_presentation": "pres-2026-ucgis-zambia-mobility",
+      "related_project": "NSF Award #2451156",
+      "tags": [
+        "Web GIS",
+        "Interactive Map",
+        "Mobility Visualization",
+        "Public Health Dashboard",
+        "Zambia"
+      ]
+    },
+    {
+      "id": "repo-100rc-improved-rsei",
+      "name": "100RCImproved-RSEI",
+      "full_name": "biswasjayanta/100RCImproved-RSEI",
+      "url": "https://github.com/biswasjayanta/100RCImproved-RSEI",
+      "description": "R workflows and statistical routines implementing the Improved Remote Sensing Ecological Index (RSEI) for comparative urban sustainability assessment in South Asian cities.",
+      "primary_language": "R",
+      "languages": [
+        "R"
+      ],
+      "stars": 0,
+      "category": "Remote Sensing & Environmental Modeling",
+      "domain": "Urban Sustainability & Ecological Quality",
+      "is_featured": true,
+      "updated_at": "2026-09-26T20:34:56Z",
+      "related_publication": "pub-2026-rsei-100rc",
+      "tags": [
+        "R",
+        "RSEI",
+        "Urban Sustainability",
+        "100 Resilient Cities",
+        "Environmental Monitoring"
+      ]
+    },
+    {
+      "id": "repo-urban-degradation-rsei",
+      "name": "Urban-Degradation-using-RSEI",
+      "full_name": "biswasjayanta/Urban-Degradation-using-RSEI",
+      "url": "https://github.com/biswasjayanta/Urban-Degradation-using-RSEI",
+      "description": "Jupyter notebook implementation of the Weighted Entropy Remote Sensing Ecological Index for quantifying urban environmental degradation across 12 cities in Bangladesh.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Remote Sensing & Environmental Modeling",
+      "domain": "Ecological Indexing & Remote Sensing",
+      "is_featured": true,
+      "updated_at": "2026-09-26T20:37:01Z",
+      "related_publication": "pub-2025-rsei-bangladesh-entropy",
+      "tags": [
+        "RSEI",
+        "Entropy Weight Method",
+        "Urban Degradation",
+        "Bangladesh",
+        "Python",
+        "Remote Sensing"
+      ]
+    },
+    {
+      "id": "repo-tourism-remote-sensing",
+      "name": "TourismRemoteSensing",
+      "full_name": "biswasjayanta/TourismRemoteSensing",
+      "url": "https://github.com/biswasjayanta/TourismRemoteSensing",
+      "description": "Satellite image processing and multi-temporal Sentinel-2 classification scripts assessing tourism impact and environmental degradation on Saint Martin Island, Bangladesh.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Remote Sensing & Environmental Modeling",
+      "domain": "Coastal Ecology & Tourism Impact",
+      "is_featured": true,
+      "updated_at": "2026-09-26T20:39:17Z",
+      "related_publication": "pub-2025-saint-martin-tourism",
+      "tags": [
+        "Sentinel-2",
+        "Remote Sensing",
+        "Saint Martin Island",
+        "LULC Classification",
+        "Tourism Impact"
+      ]
+    },
+    {
+      "id": "repo-geospatial-workflows",
+      "name": "Geospatial_Workflows",
+      "full_name": "biswasjayanta/Geospatial_Workflows",
+      "url": "https://github.com/biswasjayanta/Geospatial_Workflows",
+      "description": "Modular end-to-end geospatial workflows covering spatial machine learning ensembles, wildfire susceptibility modeling, raster processing, and automated spatial feature engineering.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "GeoAI & Deep Learning",
+      "domain": "Machine Learning & Spatial Automation",
+      "is_featured": true,
+      "updated_at": "2026-01-28T15:58:22Z",
+      "related_publication": "pub-2025-geoai-wildfire",
+      "tags": [
+        "Geospatial Workflows",
+        "Machine Learning",
+        "Wildfire Modeling",
+        "Spatial Data Science"
+      ]
+    },
+    {
+      "id": "repo-google-earth-engine",
+      "name": "Google-Earth-Engine",
+      "full_name": "biswasjayanta/Google-Earth-Engine",
+      "url": "https://github.com/biswasjayanta/Google-Earth-Engine",
+      "description": "Collection of Google Earth Engine (GEE) JavaScript and Python API scripts for satellite imagery classification, indices computation (NDVI, NDWI, NDBI), and LULC dynamics.",
+      "primary_language": "JavaScript",
+      "languages": [
+        "JavaScript",
+        "Python"
+      ],
+      "stars": 0,
+      "category": "Remote Sensing & Environmental Modeling",
+      "domain": "Cloud Remote Sensing",
+      "is_featured": false,
+      "updated_at": "2025-04-16T15:22:33Z",
+      "related_publication": "pub-2023-heliyon-chattogram-lulc",
+      "tags": [
+        "Google Earth Engine",
+        "GEE",
+        "Remote Sensing",
+        "Landsat",
+        "Sentinel",
+        "Cloud Computing"
+      ]
+    },
+    {
+      "id": "repo-charlotte-landuse",
+      "name": "charlotte-landuse",
+      "full_name": "biswasjayanta/charlotte-landuse",
+      "url": "https://github.com/biswasjayanta/charlotte-landuse",
+      "description": "Interactive geospatial web map application exploring urban land use zoning and development patterns in Charlotte, North Carolina.",
+      "primary_language": "HTML",
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Urban Land Use & Web GIS",
+      "is_featured": false,
+      "updated_at": "2026-04-27T16:38:49Z",
+      "tags": [
+        "Charlotte",
+        "Land Use",
+        "Web GIS",
+        "Interactive Mapping",
+        "Urban Planning"
+      ]
+    },
+    {
+      "id": "repo-potential-accessibility-analysis",
+      "name": "Potential-Accessibility-Analysis",
+      "full_name": "biswasjayanta/Potential-Accessibility-Analysis",
+      "url": "https://github.com/biswasjayanta/Potential-Accessibility-Analysis",
+      "description": "Python and Colab routines implementing potential accessibility measures, travel-time matrix generation, and public transit network modeling for metro lines.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Transportation & Accessibility",
+      "domain": "Transit Accessibility & Network Modeling",
+      "is_featured": false,
+      "updated_at": "2022-11-04T19:35:45Z",
+      "tags": [
+        "Accessibility Analysis",
+        "Public Transit",
+        "Network Analysis",
+        "MRT-6",
+        "Python",
+        "Urban Transport"
+      ]
+    },
+    {
+      "id": "repo-osrm-backend",
+      "name": "osrm-backend",
+      "full_name": "biswasjayanta/osrm-backend",
+      "url": "https://github.com/biswasjayanta/osrm-backend",
+      "description": "High-performance routing engine in C++ designed for OpenStreetMap road networks to compute multi-destination matrix routing and shortest path accessibility.",
+      "primary_language": "C++",
+      "languages": [
+        "C++"
+      ],
+      "stars": 0,
+      "category": "Transportation & Accessibility",
+      "domain": "High-Performance Routing & Network Optimization",
+      "is_featured": false,
+      "updated_at": "2026-02-06T08:58:23Z",
+      "tags": [
+        "OSRM",
+        "Routing Engine",
+        "C++",
+        "OpenStreetMap",
+        "Transportation Networks"
+      ]
+    },
+    {
+      "id": "repo-python-for-geospatial",
+      "name": "Python-For-GeospatialAnalysis",
+      "full_name": "biswasjayanta/Python-For-GeospatialAnalysis",
+      "url": "https://github.com/biswasjayanta/Python-For-GeospatialAnalysis",
+      "description": "Comprehensive solutions and code templates for spatial problems using Python libraries (GeoPandas, Shapely, PySAL, Rasterio).",
+      "primary_language": "Python",
+      "languages": [
+        "Python"
+      ],
+      "stars": 0,
+      "category": "Coursework & Spatial Toolkits",
+      "domain": "Spatial Data Science Tutorials",
+      "is_featured": false,
+      "updated_at": "2026-01-28T16:44:51Z",
+      "tags": [
+        "Python",
+        "GeoPandas",
+        "Rasterio",
+        "Spatial Analysis",
+        "GIS Tutorial"
+      ]
+    },
+    {
+      "id": "repo-python-maps",
+      "name": "PythonMaps",
+      "full_name": "biswasjayanta/PythonMaps",
+      "url": "https://github.com/biswasjayanta/PythonMaps",
+      "description": "Curated examples of publication-grade thematic cartography, choropleth maps, and spatial visualizations in Python.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Coursework & Spatial Toolkits",
+      "domain": "Cartography & Spatial Visualization",
+      "is_featured": false,
+      "updated_at": "2023-04-28T09:34:58Z",
+      "tags": [
+        "Thematic Mapping",
+        "Cartography",
+        "Python",
+        "Data Visualization",
+        "Matplotlib"
+      ]
+    },
+    {
+      "id": "repo-map-diary",
+      "name": "Map-Diary",
+      "full_name": "biswasjayanta/Map-Diary",
+      "url": "https://github.com/biswasjayanta/Map-Diary",
+      "description": "Creative geospatial visualizations and artistic city maps capturing urban morphology and landscape patterns.",
+      "primary_language": "Python",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Coursework & Spatial Toolkits",
+      "domain": "Creative Cartography",
+      "is_featured": false,
+      "updated_at": "2022-12-07T18:23:57Z",
+      "tags": [
+        "Cartography",
+        "Urban Morphology",
+        "Map Design",
+        "City Visualization"
+      ]
+    },
+    {
+      "id": "repo-demo-interactive-map-1",
+      "name": "DemoInteractiveMap1",
+      "full_name": "biswasjayanta/DemoInteractiveMap1",
+      "url": "https://github.com/biswasjayanta/DemoInteractiveMap1",
+      "description": "Interactive Web GIS map demo featuring vector layering, custom basemaps, and popup infowindows.",
+      "primary_language": "HTML",
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Interactive Web GIS",
+      "is_featured": false,
+      "updated_at": "2026-04-09T03:17:16Z",
+      "tags": [
+        "Leaflet",
+        "Web GIS",
+        "Interactive Map",
+        "Frontend"
+      ]
+    },
+    {
+      "id": "repo-demo-interactive-map-2",
+      "name": "DemoInteractiveMap2",
+      "full_name": "biswasjayanta/DemoInteractiveMap2",
+      "url": "https://github.com/biswasjayanta/DemoInteractiveMap2",
+      "description": "Advanced Web GIS interactive mapping application with spatial filtering and spatial query capabilities.",
+      "primary_language": "HTML",
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Interactive Web GIS",
+      "is_featured": false,
+      "updated_at": "2026-04-09T03:23:21Z",
+      "tags": [
+        "Web GIS",
+        "Spatial Filter",
+        "Frontend Map",
+        "HTML/JS"
+      ]
+    },
+    {
+      "id": "repo-mountain-bangladesh",
+      "name": "mountain-bangladesh",
+      "full_name": "biswasjayanta/mountain-bangladesh",
+      "url": "https://github.com/biswasjayanta/mountain-bangladesh",
+      "description": "Digital elevation and topographic visualization of the Chittagong Hill Tracts and mountainous regions of Bangladesh.",
+      "primary_language": "JavaScript",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Terrain Visualization",
+      "is_featured": false,
+      "updated_at": "2026-04-04T16:03:13Z",
+      "tags": [
+        "Topography",
+        "Chittagong Hill Tracts",
+        "JavaScript",
+        "Elevation",
+        "Terrain"
+      ]
+    },
+    {
+      "id": "repo-ecology",
+      "name": "Ecology",
+      "full_name": "biswasjayanta/Ecology",
+      "url": "https://github.com/biswasjayanta/Ecology",
+      "description": "Scripts and workflows for landscape ecology metrics, vegetation dynamics, and habitat fragmentation.",
+      "primary_language": "Python",
+      "languages": [
+        "Python",
+        "R"
+      ],
+      "stars": 0,
+      "category": "Remote Sensing & Environmental Modeling",
+      "domain": "Landscape Ecology",
+      "is_featured": false,
+      "updated_at": "2024-07-13T06:05:31Z",
+      "tags": [
+        "Landscape Ecology",
+        "Habitat Fragmentation",
+        "Spatial Ecology",
+        "Environmental Metrics"
+      ]
+    },
+    {
+      "id": "repo-coursera-capstone",
+      "name": "Coursera_Capstone",
+      "full_name": "biswasjayanta/Coursera_Capstone",
+      "url": "https://github.com/biswasjayanta/Coursera_Capstone",
+      "description": "IBM Applied Data Science Capstone project utilizing Foursquare location API and machine learning clustering algorithms for urban venue recommendation.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Coursework & Spatial Toolkits",
+      "domain": "Data Science Capstone",
+      "is_featured": false,
+      "updated_at": "2021-03-13T20:55:12Z",
+      "tags": [
+        "IBM Data Science",
+        "Coursera",
+        "K-Means Clustering",
+        "Foursquare API",
+        "Python"
+      ]
+    },
+    {
+      "id": "repo-ml-with-python-coursera",
+      "name": "Mechine-Learning-with-Python-coursera",
+      "full_name": "biswasjayanta/Mechine-Learning-with-Python-coursera",
+      "url": "https://github.com/biswasjayanta/Mechine-Learning-with-Python-coursera",
+      "description": "Supervised machine learning algorithms evaluation and benchmark classifiers (KNN, Decision Tree, SVM, Logistic Regression) with scikit-learn.",
+      "primary_language": "Jupyter Notebook",
+      "languages": [
+        "Python",
+        "Jupyter Notebook"
+      ],
+      "stars": 0,
+      "category": "Coursework & Spatial Toolkits",
+      "domain": "Machine Learning Foundations",
+      "is_featured": false,
+      "updated_at": "2021-03-13T11:29:52Z",
+      "tags": [
+        "Machine Learning",
+        "scikit-learn",
+        "Classification",
+        "Coursera",
+        "Python"
+      ]
+    },
+    {
+      "id": "repo-github-pages-portfolio",
+      "name": "biswasjayanta.github.io",
+      "full_name": "biswasjayanta/biswasjayanta.github.io",
+      "url": "https://github.com/biswasjayanta/biswasjayanta.github.io",
+      "description": "Personal GitHub Pages academic and professional portfolio website showcasing research projects, publications, interactive maps, and curriculum vitae.",
+      "primary_language": "HTML",
+      "languages": [
+        "HTML",
+        "JavaScript",
+        "CSS"
+      ],
+      "stars": 0,
+      "category": "Web GIS & Dashboards",
+      "domain": "Portfolio & Personal Website",
+      "is_featured": true,
+      "updated_at": "2026-04-09T03:22:18Z",
+      "tags": [
+        "GitHub Pages",
+        "Portfolio",
+        "Academic Website",
+        "Web GIS",
+        "HTML/CSS"
+      ]
+    }
+  ]
+}
